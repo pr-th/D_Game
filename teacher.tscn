@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://tl3hqre8fx8w"]
+
+[ext_resource type="PackedScene" uid="uid://i5o0dx164itp" path="res://Scenes/teacher.tscn" id="1_00oqr"]
+[ext_resource type="Texture2D" uid="uid://cgndjpdvtwgo3" path="res://Assets/Idle.png" id="2_l1w2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tdbj"]
+atlas = ExtResource("2_l1w2m")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3ne6"]
+atlas = ExtResource("2_l1w2m")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6radr"]
+atlas = ExtResource("2_l1w2m")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atxf7"]
+atlas = ExtResource("2_l1w2m")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckx4r"]
+atlas = ExtResource("2_l1w2m")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4bta"]
+atlas = ExtResource("2_l1w2m")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_76n70"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tdbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3ne6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6radr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atxf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckx4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4bta")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Teacher" parent="." instance=ExtResource("1_00oqr")]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Teacher"]
+sprite_frames = SubResource("SpriteFrames_76n70")
+frame_progress = 0.955547

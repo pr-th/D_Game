@@ -81,11 +81,10 @@ animations = [{
 script = ExtResource("1_lnovq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(35, 9)
 shape = SubResource("CircleShape2D_kvrac")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7x53n")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.624929
