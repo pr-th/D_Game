@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=3 uid="uid://cngibk5gbb0a3"]
+
+[ext_resource type="Texture2D" uid="uid://c46xut6paqx6d" path="res://Assets/Characters_free/Amelia_16x16.png" id="1_jyrih"]
+[ext_resource type="Script" uid="uid://pc6funbwx4fi" path="res://Scripts/amulya.gd" id="1_lnovq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kvrac"]
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnovq"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(0, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ldys"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(16, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh1ji"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(32, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8k8oh"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(48, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7gjw"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(64, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx63i"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(80, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cujm4"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(96, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to7aq"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(112, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mhh6"]
+atlas = ExtResource("1_jyrih")
+region = Rect2(128, 192, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7x53n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnovq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ldys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh1ji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8k8oh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7gjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx63i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cujm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to7aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mhh6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Amulya" type="CharacterBody2D"]
+script = ExtResource("1_lnovq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_kvrac")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7x53n")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.624929
