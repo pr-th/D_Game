@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqv4sbsaj5pld"]
+[gd_scene load_steps=8 format=3 uid="uid://cqv4sbsaj5pld"]
 
 [ext_resource type="Script" uid="uid://cbq8igyhcwgnm" path="res://main_menu.gd" id="1_n45e2"]
+[ext_resource type="FontFile" uid="uid://dvtbwtea6wst6" path="res://Assets/font/Round9x13.ttf" id="2_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://do4xas2bfl76m" path="res://Assets/start.png" id="2_opfnp"]
 [ext_resource type="Texture2D" uid="uid://ceb3myoxsatkq" path="res://Assets/crown.png" id="3_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://bhwx858qr4b6f" path="res://Assets/info.png" id="4_yhxw7"]
@@ -11,13 +12,23 @@ bg_color = Color(0.358992, 0.484376, 0.374887, 1)
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_n45e2")
-metadata/_edit_horizontal_guides_ = [350.0, 267.0]
+metadata/_edit_horizontal_guides_ = [350.0, 267.0, -54.0]
 metadata/_edit_vertical_guides_ = [596.0, 223.0, 932.0, 575.0]
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1155.0
 offset_bottom = 649.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_16hvj")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 201.0
+offset_right = 816.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("2_cp0ys")
+theme_override_font_sizes/font_size = 64
+text = "DARWIN'S GAME"
 
 [node name="Crown_BTN" type="Button" parent="."]
 offset_left = 71.0
@@ -44,7 +55,7 @@ offset_right = 650.0
 offset_bottom = 516.0
 
 [node name="s_btn" type="Sprite2D" parent="."]
-position = Vector2(548, 451)
+position = Vector2(547, 451)
 scale = Vector2(0.316081, 0.252441)
 texture = ExtResource("2_opfnp")
 
