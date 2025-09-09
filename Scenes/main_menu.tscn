@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqv4sbsaj5pld"]
+
+[ext_resource type="Script" uid="uid://cbq8igyhcwgnm" path="res://main_menu.gd" id="1_n45e2"]
+[ext_resource type="Texture2D" uid="uid://do4xas2bfl76m" path="res://Assets/start.png" id="2_opfnp"]
+[ext_resource type="Texture2D" uid="uid://ceb3myoxsatkq" path="res://Assets/crown.png" id="3_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://bhwx858qr4b6f" path="res://Assets/info.png" id="4_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://cm215fbq64hnn" path="res://Assets/question.png" id="5_trj04"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16hvj"]
+bg_color = Color(0.358992, 0.484376, 0.374887, 1)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_n45e2")
+metadata/_edit_horizontal_guides_ = [350.0, 267.0]
+metadata/_edit_vertical_guides_ = [596.0, 223.0, 932.0, 575.0]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1155.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_16hvj")
+
+[node name="Crown_BTN" type="Button" parent="."]
+offset_left = 71.0
+offset_top = 350.0
+offset_right = 218.0
+offset_bottom = 433.0
+
+[node name="Info_BTN" type="Button" parent="."]
+offset_left = 1026.0
+offset_top = 23.0
+offset_right = 1126.0
+offset_bottom = 104.0
+
+[node name="Question_BTN" type="Button" parent="."]
+offset_left = 939.0
+offset_top = 349.0
+offset_right = 1084.0
+offset_bottom = 434.0
+
+[node name="Start_BTN" type="Button" parent="."]
+offset_left = 488.0
+offset_top = 432.0
+offset_right = 650.0
+offset_bottom = 516.0
+
+[node name="s_btn" type="Sprite2D" parent="."]
+position = Vector2(548, 451)
+scale = Vector2(0.316081, 0.252441)
+texture = ExtResource("2_opfnp")
+
+[node name="i_btn" type="Sprite2D" parent="."]
+position = Vector2(1098.13, 41.9375)
+scale = Vector2(0.22168, 0.25415)
+texture = ExtResource("4_yhxw7")
+
+[node name="C_btn" type="Sprite2D" parent="."]
+position = Vector2(122, 401)
+scale = Vector2(0.293132, 0.253296)
+texture = ExtResource("3_cp0ys")
+
+[node name="q_btn" type="Sprite2D" parent="."]
+position = Vector2(1042, 402)
+scale = Vector2(0.326172, 0.250244)
+texture = ExtResource("5_trj04")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2rbjk8nahic1"
-path="res://.godot/imported/hud icons.png-6ac27cc93dc59837573b3f7d62f77dbb.ctex"
+uid="uid://cdpxai43me4kk"
+path="res://.godot/imported/crown.png-cc01129919b89aa46a7181a5c46136fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hud icons.png"
-dest_files=["res://.godot/imported/hud icons.png-6ac27cc93dc59837573b3f7d62f77dbb.ctex"]
+source_file="res://Assets/Characters_free/crown.png"
+dest_files=["res://.godot/imported/crown.png-cc01129919b89aa46a7181a5c46136fb.ctex"]
 
 [params]
 
