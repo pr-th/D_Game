@@ -5,8 +5,8 @@
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1917.0
+offset_bottom = 1073.0
 
 [node name="MainMenu" parent="." instance=ExtResource("2_ldmh8")]
 offset_top = -3.0
