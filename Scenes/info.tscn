@@ -12,6 +12,7 @@ script = ExtResource("1_ugdrp")
 metadata/_edit_horizontal_guides_ = [136.0, 411.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_top = -2.0
 offset_right = 1150.0
 offset_bottom = 647.0
@@ -19,6 +20,7 @@ texture = ExtResource("2_qjrxf")
 expand_mode = 1
 
 [node name="Right_page" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 614.0
 offset_top = 137.0
 offset_right = 898.0
@@ -26,6 +28,7 @@ offset_bottom = 411.0
 bbcode_enabled = true
 
 [node name="Left_page" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 242.0
 offset_top = 136.0
 offset_right = 533.0
@@ -44,12 +47,14 @@ scale = Vector2(0.0737305, 0.0766602)
 texture = ExtResource("3_qjrxf")
 
 [node name="next_button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 867.0
 offset_top = 423.0
 offset_right = 910.0
 offset_bottom = 474.0
 
 [node name="prev_button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 219.0
 offset_top = 424.0
 offset_right = 269.0
@@ -61,6 +66,7 @@ scale = Vector2(0.142334, 0.115479)
 texture = ExtResource("4_ahul7")
 
 [node name="home_btn" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1003.0
 offset_top = 36.0
 offset_right = 1083.0

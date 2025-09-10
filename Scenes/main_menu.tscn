@@ -18,6 +18,7 @@ metadata/_edit_horizontal_guides_ = [350.0, 267.0, -54.0]
 metadata/_edit_vertical_guides_ = [596.0, 223.0, 932.0, 575.0]
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 0
 offset_right = 3829.0
 offset_bottom = 2166.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_16hvj")
@@ -33,24 +34,28 @@ theme_override_font_sizes/font_size = 64
 text = "DARWIN'S GAME"
 
 [node name="Crown_BTN" type="Button" parent="."]
+layout_mode = 0
 offset_left = 71.0
 offset_top = 350.0
 offset_right = 218.0
 offset_bottom = 433.0
 
 [node name="Info_BTN" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1026.0
 offset_top = 23.0
 offset_right = 1126.0
 offset_bottom = 104.0
 
 [node name="Question_BTN" type="Button" parent="."]
+layout_mode = 0
 offset_left = 939.0
 offset_top = 349.0
 offset_right = 1084.0
 offset_bottom = 434.0
 
 [node name="Start_BTN" type="Button" parent="."]
+layout_mode = 0
 offset_left = 488.0
 offset_top = 432.0
 offset_right = 650.0
