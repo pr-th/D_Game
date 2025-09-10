@@ -1,15 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://l1y08p7lcq0t"]
+[gd_scene load_steps=2 format=3 uid="uid://l1y08p7lcq0t"]
 
-[ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="1_jl71k"]
 [ext_resource type="PackedScene" uid="uid://cqv4sbsaj5pld" path="res://Scenes/main_menu.tscn" id="2_ldmh8"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Amulya" parent="." instance=ExtResource("1_jl71k")]
-position = Vector2(33, 24)
-
 [node name="MainMenu" parent="." instance=ExtResource("2_ldmh8")]
-position = Vector2(4, 1)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(582, 324)
+position = Vector2(2, -1)

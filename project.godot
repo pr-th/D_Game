@@ -19,6 +19,25 @@ config/icon="res://icon.svg"
 
 theme/custom_font="uid://dvtbwtea6wst6"
 
+[input]
+
+move_up={
+"deadzone": 0.2,
+"events": []
+}
+move_down={
+"deadzone": 0.2,
+"events": []
+}
+move_left={
+"deadzone": 0.2,
+"events": []
+}
+move_right={
+"deadzone": 0.2,
+"events": []
+}
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
