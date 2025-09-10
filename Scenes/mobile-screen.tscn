@@ -23,29 +23,29 @@ tile_set = ExtResource("1_5tyyg")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="right" type="TextureButton" parent="CanvasLayer" groups=["mobile_controls"]]
-offset_left = 188.0
-offset_top = 432.0
-offset_right = 273.0
-offset_bottom = 518.0
+offset_left = 205.0
+offset_top = 433.0
+offset_right = 290.0
+offset_bottom = 519.0
 texture_normal = ExtResource("4_b6by1")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="down" type="TextureButton" parent="CanvasLayer" groups=["mobile_controls"]]
-offset_left = 146.0
-offset_top = 476.0
-offset_right = 231.0
-offset_bottom = 556.0
+offset_left = 145.0
+offset_top = 491.0
+offset_right = 230.0
+offset_bottom = 571.0
 texture_normal = ExtResource("2_u5vef")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
 [node name="left" type="TextureButton" parent="CanvasLayer" groups=["mobile_controls"]]
-offset_left = 103.0
-offset_top = 433.0
-offset_right = 188.0
-offset_bottom = 519.0
+offset_left = 87.0
+offset_top = 432.0
+offset_right = 172.0
+offset_bottom = 518.0
 texture_normal = ExtResource("4_b6by1")
 ignore_texture_size = true
 stretch_mode = 0
@@ -53,14 +53,22 @@ flip_h = true
 
 [node name="up" type="TextureButton" parent="CanvasLayer"]
 offset_left = 146.0
-offset_top = 395.0
+offset_top = 379.0
 offset_right = 231.0
-offset_bottom = 475.0
+offset_bottom = 459.0
 texture_normal = ExtResource("2_u5vef")
 ignore_texture_size = true
 stretch_mode = 0
 
+[connection signal="button_down" from="CanvasLayer/right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="CanvasLayer/right" to="." method="_on_right_button_up"]
 [connection signal="pressed" from="CanvasLayer/right" to="." method="_on_right_pressed"]
+[connection signal="button_down" from="CanvasLayer/down" to="." method="_on_down_button_down"]
+[connection signal="button_up" from="CanvasLayer/down" to="." method="_on_down_button_up"]
 [connection signal="pressed" from="CanvasLayer/down" to="." method="_on_down_pressed"]
+[connection signal="button_down" from="CanvasLayer/left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="CanvasLayer/left" to="." method="_on_left_button_up"]
 [connection signal="pressed" from="CanvasLayer/left" to="." method="_on_left_pressed"]
+[connection signal="button_down" from="CanvasLayer/up" to="." method="_on_up_button_down"]
+[connection signal="button_up" from="CanvasLayer/up" to="." method="_on_up_button_up"]
 [connection signal="pressed" from="CanvasLayer/up" to="." method="_on_up_pressed"]

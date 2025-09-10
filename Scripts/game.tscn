@@ -9,3 +9,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="MainMenu" parent="." instance=ExtResource("2_ldmh8")]
+offset_top = -3.0
+offset_right = 154.0
+offset_bottom = -3.0

@@ -18,61 +18,61 @@ metadata/_edit_horizontal_guides_ = [350.0, 267.0, -54.0]
 metadata/_edit_vertical_guides_ = [596.0, 223.0, 932.0, 575.0]
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1155.0
-offset_bottom = 649.0
+offset_right = 1918.0
+offset_bottom = 1086.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_16hvj")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 340.0
-offset_top = 201.0
-offset_right = 816.0
-offset_bottom = 380.0
+offset_left = 701.0
+offset_top = 463.0
+offset_right = 1177.0
+offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("2_cp0ys")
 theme_override_font_sizes/font_size = 64
 text = "DARWIN'S GAME"
 
 [node name="Crown_BTN" type="Button" parent="."]
-offset_left = 71.0
-offset_top = 350.0
-offset_right = 218.0
-offset_bottom = 433.0
+offset_left = 159.0
+offset_top = 817.0
+offset_right = 306.0
+offset_bottom = 900.0
 
 [node name="Info_BTN" type="Button" parent="."]
-offset_left = 1026.0
-offset_top = 23.0
-offset_right = 1126.0
-offset_bottom = 104.0
+offset_left = 1654.0
+offset_top = 267.0
+offset_right = 1754.0
+offset_bottom = 348.0
 
 [node name="Question_BTN" type="Button" parent="."]
-offset_left = 939.0
-offset_top = 349.0
-offset_right = 1084.0
-offset_bottom = 434.0
+offset_left = 1694.0
+offset_top = 842.0
+offset_right = 1839.0
+offset_bottom = 927.0
 
 [node name="Start_BTN" type="Button" parent="."]
-offset_left = 488.0
-offset_top = 432.0
-offset_right = 650.0
-offset_bottom = 516.0
+offset_left = 849.0
+offset_top = 894.0
+offset_right = 1011.0
+offset_bottom = 978.0
 
 [node name="s_btn" type="Sprite2D" parent="."]
-position = Vector2(547, 451)
+position = Vector2(905, 913)
 scale = Vector2(0.316081, 0.252441)
 texture = ExtResource("2_opfnp")
 
 [node name="i_btn" type="Sprite2D" parent="."]
-position = Vector2(1098.13, 41.9375)
+position = Vector2(1723, 281)
 scale = Vector2(0.22168, 0.25415)
 texture = ExtResource("4_yhxw7")
 
 [node name="C_btn" type="Sprite2D" parent="."]
-position = Vector2(122, 401)
+position = Vector2(208, 873)
 scale = Vector2(0.293132, 0.253296)
 texture = ExtResource("3_cp0ys")
 
 [node name="q_btn" type="Sprite2D" parent="."]
-position = Vector2(1042, 402)
+position = Vector2(1797, 895)
 scale = Vector2(0.326172, 0.250244)
 texture = ExtResource("5_trj04")
 
