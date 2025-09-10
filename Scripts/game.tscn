@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://l1y08p7lcq0t"]
+[gd_scene load_steps=3 format=3 uid="uid://l1y08p7lcq0t"]
 
+[ext_resource type="Script" uid="uid://c1vah6ln804ny" path="res://Scripts/game.gd" id="1_ldmh8"]
 [ext_resource type="PackedScene" uid="uid://cqv4sbsaj5pld" path="res://Scenes/main_menu.tscn" id="2_ldmh8"]
 
 [node name="Control" type="Control"]
@@ -7,6 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1917.0
 offset_bottom = 1073.0
+script = ExtResource("1_ldmh8")
 
 [node name="MainMenu" parent="." instance=ExtResource("2_ldmh8")]
 offset_top = -3.0

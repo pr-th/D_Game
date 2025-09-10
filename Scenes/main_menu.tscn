@@ -19,8 +19,8 @@ metadata/_edit_vertical_guides_ = [596.0, 223.0, 932.0, 575.0]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 3829.0
-offset_bottom = 2166.0
+offset_right = 1155.0
+offset_bottom = 665.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_16hvj")
 
 [node name="Label" type="Label" parent="Panel"]
