@@ -80,10 +80,6 @@ radius = 21.0238
 [node name="Amulya" type="CharacterBody2D"]
 script = ExtResource("1_lnovq")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
-position_smoothing_enabled = true
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_kvrac")
@@ -92,3 +88,6 @@ frame_progress = 0.0274681
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 29)
 shape = SubResource("CircleShape2D_kvrac")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)

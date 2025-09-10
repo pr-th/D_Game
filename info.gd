@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 @export var json_file: String = "res://Assets/pages.json"
 var pages: Array = []
 var current_page: int = 0

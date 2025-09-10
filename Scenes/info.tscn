@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://dbqr6avmwvcr7" path="res://Assets/arrow.png" id="3_qjrxf"]
 [ext_resource type="Texture2D" uid="uid://obtp1m0fkst7" path="res://Assets/home.png" id="4_ahul7"]
 
-[node name="Info" type="Node2D"]
+[node name="Info" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_ugdrp")
 metadata/_edit_horizontal_guides_ = [136.0, 411.0]
 

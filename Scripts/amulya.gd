@@ -3,42 +3,21 @@ extends CharacterBody2D
 const SPEED = 300.0
 var input_vector := Vector2.ZERO
 
-func _physics_process(delta: float) -> void:
-	velocity = input_vector * SPEED
+func _ready():
+	await get_tree().process_frame  
+	var controller = get_tree().get_first_node_in_group("mobile_controls")
+	if controller:
+		controller.connect("direction_changed", Callable(self, "_on_direction_changed"))
+		print("Connected to controller:", controller.name)
+	else:
+		push_error("Controller not found!")
+
+func _on_direction_changed(new_vector: Vector2) -> void:
+	input_vector = new_vector
+
+func _physics_process(_delta: float) -> void:
+	if input_vector != Vector2.ZERO:
+		velocity = input_vector.normalized() * SPEED
+	else:
+		velocity = Vector2.ZERO
 	move_and_slide()
-
-
-# --- Up Button ---
-func _on_up_button_down() -> void:
-	input_vector.y = -1
-
-func _on_up_button_up() -> void:
-	if input_vector.y == -1:
-		input_vector.y = 0
-
-
-# --- Down Button ---
-func _on_down_button_down() -> void:
-	input_vector.y = 1
-
-func _on_down_button_up() -> void:
-	if input_vector.y == 1:
-		input_vector.y = 0
-
-
-# --- Left Button ---
-func _on_left_button_down() -> void:
-	input_vector.x = -1
-
-func _on_left_button_up() -> void:
-	if input_vector.x == -1:
-		input_vector.x = 0
-
-
-# --- Right Button ---
-func _on_right_button_down() -> void:
-	input_vector.x = 1
-
-func _on_right_button_up() -> void:
-	if input_vector.x == 1:
-		input_vector.x = 0

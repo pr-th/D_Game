@@ -1,8 +1,18 @@
-extends CanvasLayer
+extends Control
 
-func _on_up_pressed() -> void:
-	pass # Replace with function body.
+signal direction_changed(new_vector: Vector2)
 
+func _ready():
+	print("Mobile controller ready")
 
-func _on_down_pressed() -> void:
-	pass # Replace with function body.
+func _on_up_pressed():	
+	emit_signal("direction_changed", Vector2.UP)
+
+func _on_down_pressed():
+	emit_signal("direction_changed", Vector2.DOWN)
+
+func _on_left_pressed():
+	emit_signal("direction_changed", Vector2.LEFT)
+
+func _on_right_pressed():
+	emit_signal("direction_changed", Vector2.RIGHT)

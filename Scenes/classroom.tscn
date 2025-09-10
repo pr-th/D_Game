@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=4 uid="uid://dg5qybdq43rn1"]
+[gd_scene load_steps=4 format=4 uid="uid://dg5qybdq43rn1"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_r2sku"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_e2gld"]
-[ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="3_e2gld"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="4_gd8ya"]
 
-[node name="Classroom" type="Node2D"]
+[node name="Classroom" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 metadata/_edit_horizontal_guides_ = [-2.0, 649.0, 364.0]
 metadata/_edit_vertical_guides_ = [1153.0, -2.0, 545.0]
 
@@ -16,8 +17,5 @@ tile_set = ExtResource("1_r2sku")
 [node name="Furniture" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAmAA4ABQAHAHgAAAAeAA4ABQAHAHgAAAAWAA4ABQAHAHgAAABEACEABQAfAIUAAAAQAAMABQANAEgAAAAzAAMABQANAEgAAAAhAAMABQAdAMcAAAAuAA4ABQAHAHgAAAAFAAMABQAAAHsAAAA8AAUABQAeANUAAAAWAB4ABQAHAHgAAAAeAB4ABQAHAHgAAAAmAB4ABQAHAHgAAAAuAB4ABQAHAHgAAAA6ABUABQAeAGoAAAAEABYABQAnADAAAABEAAYABQAfAIUAAAA4ABUABQAhAGsAAAA=")
 tile_set = ExtResource("2_e2gld")
-
-[node name="Amulya" parent="." instance=ExtResource("3_e2gld")]
-position = Vector2(544, 335)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_gd8ya")]

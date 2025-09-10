@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var start_btn = $Start_BTN
 @onready var info_btn = $Info_BTN

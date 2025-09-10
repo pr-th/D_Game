@@ -10,7 +10,9 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16hvj"]
 bg_color = Color(0.358992, 0.484376, 0.374887, 1)
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_n45e2")
 metadata/_edit_horizontal_guides_ = [350.0, 267.0, -54.0]
 metadata/_edit_vertical_guides_ = [596.0, 223.0, 932.0, 575.0]
