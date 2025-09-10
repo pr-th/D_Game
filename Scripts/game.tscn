@@ -2,7 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cqv4sbsaj5pld" path="res://Scenes/main_menu.tscn" id="2_ldmh8"]
 
-[node name="Game" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="MainMenu" parent="." instance=ExtResource("2_ldmh8")]
-position = Vector2(2, -1)
