@@ -81,7 +81,7 @@ animations = [{
 script = ExtResource("1_lnovq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(35, 9)
+position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_kvrac")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

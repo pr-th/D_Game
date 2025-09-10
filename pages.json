@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Emergency Contacts",
+    "content": "[b]Police:[/b] 100\n[b]Fire:[/b] 101\n[b]Ambulance:[/b] 102"
+  },
+  {
+    "title": "Earthquake Safety",
+    "content": "- Drop, Cover, Hold On\n- Stay indoors until shaking stops\n- Evacuate after shaking"
+  },
+  {
+    "title": "Flood Precautions",
+    "content": "Move valuables to higher ground\nSwitch off electricity\nEvacuate if instructed"
+  },
+  {
+    "title": "Evacuation Plan",
+    "content": "Exit through main gate\nAssemble at safe zone\nWait for further instructions"
+  }
+]

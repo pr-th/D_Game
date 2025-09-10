@@ -73,3 +73,8 @@ texture = ExtResource("3_cp0ys")
 position = Vector2(1042, 402)
 scale = Vector2(0.326172, 0.250244)
 texture = ExtResource("5_trj04")
+
+[connection signal="pressed" from="Crown_BTN" to="." method="_on_crown_btn_pressed"]
+[connection signal="pressed" from="Info_BTN" to="." method="_on_info_btn_pressed"]
+[connection signal="pressed" from="Question_BTN" to="." method="_on_question_btn_pressed"]
+[connection signal="pressed" from="Start_BTN" to="." method="_on_start_btn_pressed"]
