@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://crvnymedlc4fr"]
+[gd_scene load_steps=7 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_cd346"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_i6vy2"]
 [ext_resource type="Texture2D" uid="uid://c8wx6aw0qfmx5" path="res://Assets/white_smoke_resize.png" id="4_cd346"]
+[ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="5_i6vy2"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i6vy2"]
 particle_flag_disable_z = true
@@ -127,6 +128,9 @@ process_material = SubResource("ParticleProcessMaterial_i6vy2")
 [node name="Area2D" type="Area2D" parent="GPUParticles2D9" groups=["smoke"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D9/Area2D"]
+
+[node name="Amulya" parent="." instance=ExtResource("5_i6vy2")]
+position = Vector2(960, 223)
 
 [node name="GPUParticles2D10" type="GPUParticles2D" parent="."]
 position = Vector2(193.334, 445.717)
