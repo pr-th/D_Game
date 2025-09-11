@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://crvnymedlc4fr"]
+[gd_scene load_steps=10 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
 [ext_resource type="Script" uid="uid://hfmfa4g8w6xp" path="res://Scripts/hallway.gd" id="1_cd346"]
@@ -13,6 +13,12 @@ emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 direction = Vector3(0, -1, 0)
 gravity = Vector3(0, 20, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lkww"]
+size = Vector2(352.5, 190)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c7va"]
+size = Vector2(363.5, 191.5)
 
 [node name="hallway" type="Control"]
 layout_mode = 3
@@ -142,3 +148,20 @@ process_material = SubResource("ParticleProcessMaterial_i6vy2")
 [node name="Area2D" type="Area2D" parent="GPUParticles2D10" groups=["smoke"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D10/Area2D"]
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(191, 113)
+shape = SubResource("RectangleShape2D_3lkww")
+
+[node name="Area2D22" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D22"]
+position = Vector2(955.25, 113.75)
+shape = SubResource("RectangleShape2D_4c7va")
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D22" to="." method="_on_area_2d_22_body_entered"]
