@@ -13,10 +13,18 @@ func _ready():
 	var controller = get_tree().get_first_node_in_group("mobile_controls")
 	if controller:
 		controller.connect("direction_changed", Callable(self, "_on_direction_changed"))
+		controller.connect("l_pressed", Callable(self, "_on_l_pressed"))
+		controller.connect("r_pressed", Callable(self, "_on_r_pressed"))
 		print("Connected to controller:", controller.name)
 	else:
 		push_error("Controller not found!")
 
+func _on_l_pressed() -> void:
+	print("L button pressed")
+	
+func _on_r_pressed() -> void:
+	print("R button pressed")
+	
 func _on_direction_changed(new_vector: Vector2) -> void:
 	input_vector = new_vector
 	idle_timer = 0.0  # reset idle timer when input is detected
