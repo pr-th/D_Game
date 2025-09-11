@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://qxk7xr8bn4fi"]
+[gd_scene load_steps=4 format=3 uid="uid://cst8pbdmui4i7"]
 
-[ext_resource type="Script" uid="uid://dbb13xvyoft2a" path="res://Scripts/lose_screen.gd" id="1_kqbrk"]
+[ext_resource type="Script" uid="uid://gq4pjbuvd5k3" path="res://Scripts/done.gd" id="1_kqbrk"]
 [ext_resource type="Texture2D" uid="uid://obtp1m0fkst7" path="res://Assets/home.png" id="2_ef23m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deucp"]
