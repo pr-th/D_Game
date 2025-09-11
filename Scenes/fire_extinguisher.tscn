@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwx14opm3iqe6"]
+
+[ext_resource type="Texture2D" uid="uid://darr2sl6grk6p" path="res://Assets/cylinder.png" id="1_oll2b"]
+[ext_resource type="Texture2D" uid="uid://025yu53qhe63" path="res://Assets/pin.png" id="2_mfr6x"]
+[ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_vm405"]
+[ext_resource type="Texture2D" uid="uid://b0qrkdqy4jysm" path="res://Assets/handle.png" id="4_vm405"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2785t"]
+bg_color = Color(0.278431, 0.486275, 0.376471, 1)
+
+[node name="Fire_extinguisher" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2785t")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 74.0
+offset_right = 811.0
+offset_bottom = 125.0
+scale = Vector2(2, 2)
+text = "Press R to unpin & use."
+
+[node name="cylinder" type="Sprite2D" parent="."]
+position = Vector2(578, 362)
+texture = ExtResource("1_oll2b")
+
+[node name="pin" type="Sprite2D" parent="."]
+position = Vector2(581, 366)
+texture = ExtResource("2_mfr6x")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_vm405")]
+
+[node name="handle" type="Sprite2D" parent="."]
+position = Vector2(577, 322)
+scale = Vector2(0.85049, 0.699346)
+texture = ExtResource("4_vm405")

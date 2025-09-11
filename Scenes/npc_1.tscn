@@ -386,7 +386,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_chcah"]
 radius = 6.32456
 
-[node name="CharacterBody2D2" type="CharacterBody2D"]
+[node name="npc_1" type="CharacterBody2D"]
 script = ExtResource("1_ky38j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -394,21 +394,6 @@ position = Vector2(0, -19)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_rjma0")
 animation = &"walk_e"
-
-[node name="Waypoints" type="Node2D" parent="."]
-position = Vector2(64, 235)
-
-[node name="Point1" type="Marker2D" parent="Waypoints"]
-position = Vector2(327, -228)
-
-[node name="Point2" type="Marker2D" parent="Waypoints"]
-position = Vector2(333, -152)
-
-[node name="Point3" type="Marker2D" parent="Waypoints"]
-position = Vector2(389, -152)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
