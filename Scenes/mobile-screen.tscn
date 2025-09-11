@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://80twmfosa2l1"]
+[gd_scene load_steps=8 format=4 uid="uid://80twmfosa2l1"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5tyyg"]
 [ext_resource type="Script" uid="uid://k2dumrhmg1pm" path="res://Scenes/mobile_screen.gd" id="1_aq7k0"]
 [ext_resource type="Texture2D" uid="uid://dm8vfdywo0eu" path="res://Assets/arrow_conrol.png" id="2_u5vef"]
 [ext_resource type="Texture2D" uid="uid://btdu5g355lpcn" path="res://Assets/arrow_conrol_laid.png" id="4_b6by1"]
 [ext_resource type="Texture2D" uid="uid://d0rr6kb7bowrq" path="res://Assets/R.png" id="4_dfdsd"]
+[ext_resource type="Texture2D" uid="uid://obtp1m0fkst7" path="res://Assets/home.png" id="4_dmwhw"]
 [ext_resource type="Texture2D" uid="uid://clalccxsgbk8o" path="res://Assets/L.png" id="5_dmwhw"]
 
 [node name="CanvasLayer" type="Control" groups=["mobile_controls"]]
@@ -19,6 +20,15 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAZAAcAAAAAAAEAAQAZAAcAAAAAAAIAAQAZAAc
 tile_set = ExtResource("1_5tyyg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 987.0
+offset_top = -23.0
+offset_right = 1184.0
+offset_bottom = 139.0
+texture_normal = ExtResource("4_dmwhw")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="R" type="TextureButton" parent="CanvasLayer"]
 offset_left = 1008.0
@@ -76,6 +86,7 @@ texture_normal = ExtResource("2_u5vef")
 ignore_texture_size = true
 stretch_mode = 0
 
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/R" to="." method="_on_r_pressed"]
 [connection signal="pressed" from="CanvasLayer/L" to="." method="_on_l_pressed"]
 [connection signal="button_down" from="CanvasLayer/right" to="." method="_on_right_button_down"]

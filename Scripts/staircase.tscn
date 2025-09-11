@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://cnn053tcijvu4"]
+[gd_scene load_steps=5 format=4 uid="uid://cnn053tcijvu4"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_kfkn8"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="1_owpwo"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_eevqa"]
+[ext_resource type="Texture2D" uid="uid://cko41ujqldov6" path="res://Assets/fire-extinguisher.png" id="4_eevqa"]
 
 [node name="staircase" type="Control"]
 layout_mode = 3
@@ -19,3 +20,8 @@ tile_map_data = PackedByteArray("AAALACYABQAcAAoAAAANACYABQAcAAoAAAAPACYABQAcAAo
 tile_set = ExtResource("2_eevqa")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("1_owpwo")]
+
+[node name="fire_extinguisher" type="Sprite2D" parent="."]
+position = Vector2(180, 245)
+scale = Vector2(0.126225, 0.147876)
+texture = ExtResource("4_eevqa")
