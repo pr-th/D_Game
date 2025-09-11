@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=4 uid="uid://dg5qybdq43rn1"]
+=======
+[gd_scene load_steps=5 format=4 uid="uid://dg5qybdq43rn1"]
+>>>>>>> 56c33580f0b97d6096788ab831448f505278f9e7
 
 [ext_resource type="Script" uid="uid://bfjmkqlwdblyl" path="res://Scripts/classroom.gd" id="1_46k8r"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_r2sku"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_e2gld"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://j5apt2juqxii" path="res://Scenes/sitting_child.tscn" id="4_46k8r"]
+=======
+[ext_resource type="PackedScene" uid="uid://6ndkjy3l4cth" path="res://Scenes/npc_1.tscn" id="4_46k8r"]
+>>>>>>> 56c33580f0b97d6096788ab831448f505278f9e7
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="4_gd8ya"]
 
 [node name="Classroom" type="Control"]
@@ -25,3 +33,6 @@ tile_set = ExtResource("2_e2gld")
 position = Vector2(596, 496)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_gd8ya")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_46k8r")]
+position = Vector2(55, 359)
