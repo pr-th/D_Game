@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dg5qybdq43rn1"]
+[gd_scene load_steps=10 format=4 uid="uid://dg5qybdq43rn1"]
 
 [ext_resource type="Script" uid="uid://bpwq1wo8c57b2" path="res://Scenes/classroom.gd" id="1_46k8r"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_r2sku"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://cdklkrxqdamr1" path="res://Scenes/blocks.gd" id="3_1ckb3"]
 [ext_resource type="Texture2D" uid="uid://04gsugnl1k60" path="res://Assets/Black_smoke_resized.png" id="4_6ffwn"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="4_gd8ya"]
+[ext_resource type="PackedScene" uid="uid://6ndkjy3l4cth" path="res://Scenes/npc_1.tscn" id="7_1e8o5"]
+[ext_resource type="PackedScene" uid="uid://btla83s1qef4w" path="res://Scenes/npc_2.tscn" id="8_3ppgh"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_46k8r"]
 particle_flag_disable_z = true
@@ -48,3 +50,9 @@ tile_set = ExtResource("2_e2gld")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_gd8ya")]
 scale = Vector2(1.01193, 1.00844)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("7_1e8o5")]
+position = Vector2(54, 401)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("8_3ppgh")]
+position = Vector2(51, 318)
