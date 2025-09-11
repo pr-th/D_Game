@@ -325,8 +325,6 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_3m8pf")
 animation = &"idle_n"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 24)
 shape = SubResource("CircleShape2D_54nqp")
