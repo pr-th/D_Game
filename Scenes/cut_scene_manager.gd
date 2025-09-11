@@ -34,6 +34,13 @@ func _ready() -> void:
 		_teacher = get_node(teacher) as Node2D
 	if amulya != NodePath():
 		_amulya = get_node(amulya) as Node2D
+
+		# <-- Add this here -->
+		if _amulya.has_node("AnimatedSprite2D"):
+			_amulya.get_node("AnimatedSprite2D").visible = false
+		elif _amulya is CanvasItem:
+			_amulya.visible = false
+
 	if dialogue_label != NodePath():
 		_label = get_node(dialogue_label) as Label
 	if fire_node != NodePath():
@@ -41,6 +48,7 @@ func _ready() -> void:
 		_fire.visible = false
 
 	start_cutscene()
+
 
 # --- Main cutscene ---
 func start_cutscene() -> void:
@@ -86,9 +94,18 @@ func _teacher_enters() -> void:
 func _amulya_enters() -> void:
 	if _amulya and _amulya.has_method("start_moving"):
 		print("Amulya entering...")
+
+		# Make Amulya visible before she starts moving
+		if _amulya.has_node("AnimatedSprite2D"):
+			var sprite = _amulya.get_node("AnimatedSprite2D")
+			sprite.visible = true
+		elif _amulya is CanvasItem:
+			_amulya.visible = true
+
 		_amulya.start_moving()
 		await _amulya.finished_path
 		print("Amulya entered")
+
 
 # --- Dialogue ---
 func _run_dialogue() -> void:
