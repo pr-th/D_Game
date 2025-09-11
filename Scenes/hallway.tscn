@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://crvnymedlc4fr"]
+[gd_scene load_steps=7 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
 [ext_resource type="Script" uid="uid://hfmfa4g8w6xp" path="res://Scripts/hallway.gd" id="1_cd346"]
@@ -12,12 +12,6 @@ emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 direction = Vector3(0, -1, 0)
 gravity = Vector3(0, 20, 0)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd346"]
-size = Vector2(352, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6vy2"]
-size = Vector2(354, 193.5)
 
 [node name="hallway" type="Control"]
 layout_mode = 3

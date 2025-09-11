@@ -11,8 +11,6 @@ func _ready():
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	# Check if the body that entered the Area2D is the player
-	print("bsdk")
 	if body.is_in_group("player"):
-		print("bsdk madarchod")
 		# Change to the hallway scene
 		get_tree().change_scene_to_file("res://Scenes/hallway.tscn")
