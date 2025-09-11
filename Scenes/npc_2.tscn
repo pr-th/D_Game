@@ -317,7 +317,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_54nqp"]
 radius = 17.0294
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="npc_2" type="CharacterBody2D"]
 script = ExtResource("1_sdpn4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -330,15 +330,3 @@ animation = &"idle_n"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 24)
 shape = SubResource("CircleShape2D_54nqp")
-
-[node name="Waypoints" type="Node2D" parent="."]
-position = Vector2(0, 8)
-
-[node name="Point1" type="Marker2D" parent="Waypoints"]
-position = Vector2(662, -3)
-
-[node name="Point2" type="Marker2D" parent="Waypoints"]
-position = Vector2(664, -118)
-
-[node name="Point3" type="Marker2D" parent="Waypoints"]
-position = Vector2(729, -120)
