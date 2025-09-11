@@ -55,9 +55,6 @@ func end_cutscene() -> void:
 func _on_l_pressed() -> void:
 	print("L button pressed")
 
-func _on_r_pressed() -> void:
-	print("R button pressed")
-
 func _on_direction_changed(new_vector: Vector2) -> void:
 	if cutscene_mode: return
 	input_vector = new_vector
