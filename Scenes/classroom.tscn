@@ -124,8 +124,11 @@ teacher = NodePath("../Teacher")
 amulya = NodePath("../Amulya")
 dialogue_label = NodePath("../Label")
 
+[node name="Camera2D" type="Camera2D" parent="CutSceneManager"]
+position = Vector2(579, 331)
+
 [node name="Amulya" parent="." instance=ExtResource("13_uvfad")]
-position = Vector2(58, 229)
+position = Vector2(55, 240)
 waypoints_node = NodePath("../Waypoints_Amulya")
 
 [node name="Label" type="Label" parent="."]
@@ -136,6 +139,7 @@ offset_right = 915.0
 offset_bottom = 263.0
 
 [node name="Waypoints_Amulya" type="Node2D" parent="."]
+position = Vector2(0, -2)
 
 [node name="Point1" type="Marker2D" parent="Waypoints_Amulya"]
 position = Vector2(459, 293)
