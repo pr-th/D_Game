@@ -33,6 +33,7 @@ text = "YOU escaped
 "
 
 [node name="good job" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 473.0
 offset_top = 305.0
 offset_right = 583.0
@@ -45,10 +46,10 @@ text = "good job
 
 [node name="retry" type="TextureButton" parent="Panel"]
 layout_mode = 0
-offset_left = 476.0
-offset_top = 364.0
-offset_right = 672.0
-offset_bottom = 527.0
+offset_left = 494.0
+offset_top = 376.0
+offset_right = 690.0
+offset_bottom = 539.0
 texture_normal = ExtResource("2_ef23m")
 ignore_texture_size = true
 stretch_mode = 0

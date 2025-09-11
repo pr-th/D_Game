@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_ebomr"]
 [ext_resource type="Script" uid="uid://c1mr4m71c4nhq" path="res://Scripts/e_classroom.gd" id="1_fbdn8"]
-[ext_resource type="Script" path="res://Scenes/blocks.gd" id="2_fbdn8"]
+[ext_resource type="Script" uid="uid://cdklkrxqdamr1" path="res://Scenes/blocks.gd" id="2_fbdn8"]
 [ext_resource type="Texture2D" uid="uid://04gsugnl1k60" path="res://Assets/Black_smoke_resized.png" id="3_jmf6r"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="4_an2ye"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="5_fotbb"]
@@ -55,7 +55,6 @@ tile_set = ExtResource("4_an2ye")
 [node name="CanvasLayer" parent="." instance=ExtResource("5_fotbb")]
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
