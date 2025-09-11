@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dg5qybdq43rn1"]
+[gd_scene load_steps=12 format=4 uid="uid://dg5qybdq43rn1"]
 
 [ext_resource type="Script" uid="uid://bpwq1wo8c57b2" path="res://Scenes/classroom.gd" id="1_46k8r"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_r2sku"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="4_gd8ya"]
 [ext_resource type="PackedScene" uid="uid://6ndkjy3l4cth" path="res://Scenes/npc_1.tscn" id="7_1e8o5"]
 [ext_resource type="PackedScene" uid="uid://btla83s1qef4w" path="res://Scenes/npc_2.tscn" id="8_3ppgh"]
+[ext_resource type="PackedScene" uid="uid://ds3bxlxsfkbi0" path="res://Scenes/npc_3.tscn" id="9_3ppgh"]
+[ext_resource type="Script" uid="uid://bhjxhtx7jro8a" path="res://Scenes/npc_3.gd" id="10_fn828"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_46k8r"]
 particle_flag_disable_z = true
@@ -51,8 +53,49 @@ tile_set = ExtResource("2_e2gld")
 [node name="CanvasLayer" parent="." instance=ExtResource("4_gd8ya")]
 scale = Vector2(1.01193, 1.00844)
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("7_1e8o5")]
-position = Vector2(54, 401)
+[node name="npc_2" parent="." instance=ExtResource("8_3ppgh")]
+position = Vector2(54, 297)
+waypoints_node = NodePath("../Waypoints_npc2")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("8_3ppgh")]
-position = Vector2(51, 318)
+[node name="npc_1" parent="." instance=ExtResource("7_1e8o5")]
+position = Vector2(54, 431)
+waypoints_node = NodePath("../Waypoints_npc1")
+
+[node name="Waypoints_npc1" type="Node2D" parent="."]
+position = Vector2(54, 417)
+
+[node name="Point1" type="Marker2D" parent="Waypoints_npc1"]
+position = Vector2(398, 7)
+
+[node name="Point2" type="Marker2D" parent="Waypoints_npc1"]
+position = Vector2(396, 68)
+
+[node name="Point3" type="Marker2D" parent="Waypoints_npc1"]
+position = Vector2(460, 67)
+
+[node name="Waypoints_npc2" type="Node2D" parent="."]
+
+[node name="Point1" type="Marker2D" parent="Waypoints_npc2"]
+position = Vector2(718, 349)
+
+[node name="Point2" type="Marker2D" parent="Waypoints_npc2"]
+position = Vector2(709, 199)
+
+[node name="Point3" type="Marker2D" parent="Waypoints_npc2"]
+position = Vector2(789, 203)
+
+[node name="npc_3" parent="." instance=ExtResource("9_3ppgh")]
+position = Vector2(150, 349)
+script = ExtResource("10_fn828")
+waypoints_node = NodePath("../Waypoints_npc3")
+
+[node name="Waypoints_npc3" type="Node2D" parent="."]
+
+[node name="Point1" type="Marker2D" parent="Waypoints_npc3"]
+position = Vector2(584, 367)
+
+[node name="Point2" type="Marker2D" parent="Waypoints_npc3"]
+position = Vector2(574, 204)
+
+[node name="Point3" type="Marker2D" parent="Waypoints_npc3"]
+position = Vector2(652, 202)
