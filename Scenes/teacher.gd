@@ -9,8 +9,8 @@ var waypoints: Array[Vector2] = []
 var current_point: int = 0
 var moving: bool = true
 var last_direction: String = "walk_s" # Default facing south
-signal finished_path
 
+signal finished_path  # ✅ Signal for CutsceneManager
 
 func _ready() -> void:
 	if waypoints_node != NodePath():
@@ -18,7 +18,6 @@ func _ready() -> void:
 		for child in wp_node.get_children():
 			if child is Marker2D:
 				waypoints.append(child.global_position)
-
 
 func _physics_process(delta: float) -> void:
 	if moving and current_point < waypoints.size():
@@ -32,6 +31,7 @@ func _physics_process(delta: float) -> void:
 		# --- instant block detection ---
 		if get_slide_collision_count() > 0:
 			_stop_with_idle()
+			emit_signal("finished_path")  # ✅ stopped early
 			return
 
 		# Animation + save last direction
@@ -47,15 +47,14 @@ func _physics_process(delta: float) -> void:
 		if global_position.distance_to(target) < 5.0:
 			current_point += 1
 
-			# ✅ Reached the *final* waypoint
+			# ✅ reached last waypoint
 			if current_point >= waypoints.size():
-				emit_signal("finished_path")
 				_stop_with_idle()
+				emit_signal("finished_path")
 	else:
-		if moving:  # if stopped early
+		if moving:  # stopped without finishing path
 			emit_signal("finished_path")
 		_stop_with_idle()
-
 
 func _stop_with_idle() -> void:
 	velocity = Vector2.ZERO
@@ -70,7 +69,6 @@ func _stop_with_idle() -> void:
 	animated_sprite.play()
 	moving = false
 
-
 func start_moving() -> void:
 	moving = true
-	current_point = 0  # reset to beginning of path if needed
+	current_point = 0  # reset to start path
