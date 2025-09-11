@@ -136,10 +136,11 @@ waypoints_node = NodePath("../Waypoints_Amulya")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 875.0
-offset_top = 248.0
-offset_right = 915.0
-offset_bottom = 263.0
+offset_left = 880.0
+offset_top = 219.0
+offset_right = 1072.0
+offset_bottom = 234.0
+autowrap_mode = 2
 
 [node name="Waypoints_Amulya" type="Node2D" parent="."]
 position = Vector2(0, -2)

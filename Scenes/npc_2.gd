@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED: float = 100.0
+const SPEED: float = 200.0
 
 @export var waypoints_node: NodePath  # assign in the inspector (drag "Waypoints" here)
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D

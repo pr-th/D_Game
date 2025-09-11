@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
+const SPEED = 200.0
 const CRAWL_SPEED := 50.0
 const IDLE_TIME = 0.5  # seconds before switching to idle
 
