@@ -281,6 +281,8 @@ position = Vector2(0, -19)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_rjma0")
 animation = &"walk_s"
+frame = 3
+frame_progress = 0.464444
 
 [node name="Waypoints" type="Node2D" parent="."]
 position = Vector2(64, 235)

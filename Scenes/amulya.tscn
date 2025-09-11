@@ -266,7 +266,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kvrac"]
 radius = 21.0238
 
-[node name="Amulya" type="CharacterBody2D"]
+[node name="Amulya" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_lnovq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -1,14 +1,22 @@
-[gd_scene load_steps=4 format=4 uid="uid://crvnymedlc4fr"]
+[gd_scene load_steps=7 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
+[ext_resource type="Script" uid="uid://hfmfa4g8w6xp" path="res://Scripts/hallway.gd" id="1_cd346"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_cd346"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_i6vy2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd346"]
+size = Vector2(352, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6vy2"]
+size = Vector2(354, 193.5)
 
 [node name="hallway" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1153.0
 offset_bottom = 652.0
+script = ExtResource("1_cd346")
 metadata/_edit_vertical_guides_ = [307.0, 208.0]
 
 [node name="blocks" type="TileMapLayer" parent="."]
@@ -20,3 +28,20 @@ tile_map_data = PackedByteArray("AAArAAUABQAaAA8AAAAfAAYABQACAE8AAAAZABwABQAfAIU
 tile_set = ExtResource("2_cd346")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_i6vy2")]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(949, 113)
+shape = SubResource("RectangleShape2D_cd346")
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(199, 117.75)
+shape = SubResource("RectangleShape2D_i6vy2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
