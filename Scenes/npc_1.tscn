@@ -1,8 +1,9 @@
-[gd_scene load_steps=40 format=3 uid="uid://6ndkjy3l4cth"]
+[gd_scene load_steps=45 format=3 uid="uid://6ndkjy3l4cth"]
 
 [ext_resource type="Script" uid="uid://bhx048aih4xcm" path="res://Scenes/npc_1.gd" id="1_ky38j"]
 [ext_resource type="Texture2D" uid="uid://bcljdo0eu1g6a" path="res://Assets/Characters_free/Adam_run_16x16.png" id="1_lpqb4"]
 [ext_resource type="Texture2D" uid="uid://ype554qu0y24" path="res://Assets/Characters_free/Adam_phone_16x16.png" id="1_wp5kv"]
+[ext_resource type="Texture2D" uid="uid://b5nwfb5lacgmf" path="res://Assets/Characters_free/Adam_idle_16x16.png" id="3_i5mv1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjma0"]
 atlas = ExtResource("1_wp5kv")
@@ -39,6 +40,22 @@ region = Rect2(112, 0, 16, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bre0y"]
 atlas = ExtResource("1_wp5kv")
 region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xawbc"]
+atlas = ExtResource("3_i5mv1")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbu47"]
+atlas = ExtResource("3_i5mv1")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muagv"]
+atlas = ExtResource("3_i5mv1")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_721cy"]
+atlas = ExtResource("3_i5mv1")
+region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wp5kv"]
 atlas = ExtResource("1_lpqb4")
@@ -176,6 +193,38 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xawbc")
+}],
+"loop": true,
+"name": &"idle_e",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbu47")
+}],
+"loop": true,
+"name": &"idle_n",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muagv")
+}],
+"loop": true,
+"name": &"idle_s",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_721cy")
+}],
+"loop": true,
+"name": &"idle_w",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_wp5kv")
 }, {
 "duration": 1.0,
@@ -280,19 +329,19 @@ script = ExtResource("1_ky38j")
 position = Vector2(0, -19)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_rjma0")
-animation = &"walk_s"
+animation = &"idle_w"
 
 [node name="Waypoints" type="Node2D" parent="."]
 position = Vector2(64, 235)
 
 [node name="Point1" type="Marker2D" parent="Waypoints"]
-position = Vector2(209, -234)
+position = Vector2(327, -228)
 
 [node name="Point2" type="Marker2D" parent="Waypoints"]
-position = Vector2(347, -233)
+position = Vector2(330, -119)
 
 [node name="Point3" type="Marker2D" parent="Waypoints"]
-position = Vector2(346, -120)
+position = Vector2(462, -116)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
