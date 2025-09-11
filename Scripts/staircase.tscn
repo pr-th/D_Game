@@ -1,5 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dlhlheqy6qa3r"]
-[gd_scene load_steps=9 format=4 uid="uid://dlhlheqy6qa3r"]
+[gd_scene load_steps=15 format=4 uid="uid://dlhlheqy6qa3r"]
 
 [ext_resource type="Script" uid="uid://bfqr8p426aehw" path="res://Scripts/staircase.gd" id="1_entgn"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_kfkn8"]
@@ -7,20 +6,50 @@
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_eevqa"]
 [ext_resource type="Texture2D" uid="uid://cko41ujqldov6" path="res://Assets/fire-extinguisher.png" id="4_eevqa"]
 [ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="5_n333h"]
+[ext_resource type="Texture2D" uid="uid://ckbhs2q46ej23" path="res://Assets/fire-sketch.png" id="7_gdc0h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvml3"]
+atlas = ExtResource("7_gdc0h")
+region = Rect2(0, 0, 144, 406)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6eqh"]
+atlas = ExtResource("7_gdc0h")
+region = Rect2(144, 0, 144, 406)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reyjl"]
+atlas = ExtResource("7_gdc0h")
+region = Rect2(288, 0, 144, 406)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs6v0"]
+atlas = ExtResource("7_gdc0h")
+region = Rect2(432, 0, 144, 406)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w2s30"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvml3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6eqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_reyjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs6v0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_entgn"]
-size = Vector2(69, 102)
+size = Vector2(129, 269)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_entgn"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-direction = Vector3(0, -1, 0)
-gravity = Vector3(0, 20, 0)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_entgn"]
-radius = 15.0
-height = 60.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gdc0h"]
+radius = 14.0
+height = 64.0
 
 [node name="staircase" type="Control"]
 layout_mode = 3
@@ -47,6 +76,26 @@ texture = ExtResource("4_eevqa")
 [node name="Amulya" parent="." instance=ExtResource("5_n333h")]
 position = Vector2(260, 253)
 
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D6"]
+position = Vector2(23.9269, -3.85468)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.885321
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(204.03, 518.959)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D4"]
+position = Vector2(-14.0304, 15.0412)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.142356
+
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
 
@@ -54,16 +103,58 @@ collision_layer = 2
 position = Vector2(542, 270)
 shape = SubResource("RectangleShape2D_entgn")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(472, 267)
-process_material = SubResource("ParticleProcessMaterial_entgn")
-
 [node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(0, 6)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(181, 245)
-shape = SubResource("CapsuleShape2D_entgn")
+position = Vector2(179, 242)
+shape = SubResource("CapsuleShape2D_gdc0h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(261, 566)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.983054
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D2"]
+position = Vector2(270, 489)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.547185
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D3"]
+position = Vector2(204, 455)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.197466
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(180.605, 600.948)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D5"]
+position = Vector2(30.3952, 4.05164)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.47971
+
+[node name="Area2D3" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(225.5, 501.5)
+shape = SubResource("RectangleShape2D_entgn")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]

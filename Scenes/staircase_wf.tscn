@@ -1,5 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://dyat0uuidejia"]
-[gd_scene load_steps=8 format=4 uid="uid://bojh58u2x7rrg"]
+[gd_scene load_steps=8 format=4 uid="uid://dyat0uuidejia"]
 
 [ext_resource type="Script" uid="uid://dypf4d5t73527" path="res://Scripts/staircase_wf.gd" id="1_d6uoj"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_w6stf"]
