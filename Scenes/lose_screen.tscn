@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://bx00lta57rep"]
 
-[ext_resource type="Script" path="res://Scripts/lose_screen.gd" id="1_488pv"]
+[ext_resource type="Script" uid="uid://dbb13xvyoft2a" path="res://Scripts/lose_screen.gd" id="1_488pv"]
 [ext_resource type="Texture2D" uid="uid://ciyoc7c4ie6jj" path="res://Assets/retry.png" id="2_go37l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deucp"]
 bg_color = Color(0.278431, 0.486275, 0.376471, 1)
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1154.0

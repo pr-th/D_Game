@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://bojh58u2x7rrg"]
+[gd_scene load_steps=8 format=4 uid="uid://bojh58u2x7rrg"]
 
 [ext_resource type="Script" uid="uid://dypf4d5t73527" path="res://Scripts/staircase_wf.gd" id="1_d6uoj"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_w6stf"]
@@ -8,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nhup"]
 size = Vector2(64.5, 106.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6uoj"]
+size = Vector2(114, 72)
 
 [node name="staircase_wf" type="Control"]
 layout_mode = 3
@@ -36,4 +39,12 @@ collision_layer = 2
 position = Vector2(537.25, 275.75)
 shape = SubResource("RectangleShape2D_4nhup")
 
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(229, 601)
+shape = SubResource("RectangleShape2D_d6uoj")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

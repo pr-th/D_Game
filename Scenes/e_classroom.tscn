@@ -55,7 +55,6 @@ tile_set = ExtResource("4_an2ye")
 [node name="CanvasLayer" parent="." instance=ExtResource("5_fotbb")]
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
