@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://27fw15yg84od"]
+[gd_scene load_steps=5 format=4 uid="uid://27fw15yg84od"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_dvy5n"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_punvo"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_w2tus"]
+[ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="4_punvo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,3 +20,6 @@ tile_map_data = PackedByteArray("AAA/AAwABQAoAIQAAAAEAB0ABQAbAO0AAAAEAB4ABQAbAO0
 tile_set = ExtResource("2_punvo")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_w2tus")]
+
+[node name="Amulya" parent="." instance=ExtResource("4_punvo")]
+position = Vector2(556, 395)
