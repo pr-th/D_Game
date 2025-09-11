@@ -22,14 +22,12 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_2785t")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 239.0
-offset_top = 43.0
-offset_right = 579.0
-offset_bottom = 94.0
+offset_left = 381.0
+offset_top = 74.0
+offset_right = 811.0
+offset_bottom = 125.0
 scale = Vector2(2, 2)
-text = "Remove the pin ( By pressing r ) 
-and press the handle to start the
- fire extinguisher"
+text = "Press R to unpin & use."
 
 [node name="cylinder" type="Sprite2D" parent="."]
 position = Vector2(578, 362)
