@@ -17,7 +17,10 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=2680
+window/size/viewport_height=1200
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [gui]
 
@@ -46,3 +49,4 @@ move_right={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

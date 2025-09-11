@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=4 uid="uid://crvnymedlc4fr"]
+[gd_scene load_steps=6 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_cd346"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_i6vy2"]
+[ext_resource type="Texture2D" uid="uid://c8wx6aw0qfmx5" path="res://Assets/white_smoke_resize.png" id="4_cd346"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i6vy2"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0)
+gravity = Vector3(0, 20, 0)
 
 [node name="hallway" type="Control"]
 layout_mode = 3
@@ -20,3 +28,111 @@ tile_map_data = PackedByteArray("AAArAAUABQAaAA8AAAAfAAYABQACAE8AAAAZABwABQAfAIU
 tile_set = ExtResource("2_cd346")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_i6vy2")]
+
+[node name="GPUParticles2D12" type="GPUParticles2D" parent="."]
+position = Vector2(182.667, 381.051)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D12/Area2D"]
+
+[node name="GPUParticles2D11" type="GPUParticles2D" parent="."]
+position = Vector2(310.001, 267.051)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D11" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D11/Area2D"]
+
+[node name="GPUParticles2D7" type="GPUParticles2D" parent="."]
+position = Vector2(252.001, 298.384)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D7" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D7/Area2D"]
+
+[node name="GPUParticles2D6" type="GPUParticles2D" parent="."]
+position = Vector2(268.667, 219.717)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D6" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D6/Area2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(253, 433)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D/Area2D"]
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(246.667, 356.384)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D2" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D2/Area2D"]
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
+position = Vector2(314, 390)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D3" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D3/Area2D"]
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="."]
+position = Vector2(208.001, 254.384)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D4" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D4/Area2D"]
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="."]
+position = Vector2(194.001, 325.051)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D5" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D5/Area2D"]
+
+[node name="GPUParticles2D8" type="GPUParticles2D" parent="."]
+position = Vector2(325.334, 333.051)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D8" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D8/Area2D"]
+
+[node name="GPUParticles2D9" type="GPUParticles2D" parent="."]
+position = Vector2(313.334, 470.384)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D9" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D9/Area2D"]
+
+[node name="GPUParticles2D10" type="GPUParticles2D" parent="."]
+position = Vector2(193.334, 445.717)
+texture = ExtResource("4_cd346")
+process_material = SubResource("ParticleProcessMaterial_i6vy2")
+
+[node name="Area2D" type="Area2D" parent="GPUParticles2D10" groups=["smoke"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D10/Area2D"]
