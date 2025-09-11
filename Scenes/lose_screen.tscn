@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bx00lta57rep"]
 
-[ext_resource type="Script" uid="uid://dbb13xvyoft2a" path="res://Scripts/lose_screen.gd" id="1_488pv"]
+[ext_resource type="Script" path="res://Scripts/lose_screen.gd" id="1_488pv"]
 [ext_resource type="Texture2D" uid="uid://ciyoc7c4ie6jj" path="res://Assets/retry.png" id="2_go37l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deucp"]
