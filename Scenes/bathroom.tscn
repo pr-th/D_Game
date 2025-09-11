@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://j68tg815o64"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_a8uwc"]
-[ext_resource type="Script" path="res://Scripts/bathroom.gd" id="1_snc4n"]
+[ext_resource type="Script" uid="uid://dqgvdrw87ls7u" path="res://Scripts/bathroom.gd" id="1_snc4n"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_snc4n"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_wncak"]
 [ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="5_wncak"]
