@@ -186,8 +186,19 @@ func _trigger_fire() -> void:
 	if _fire:
 		_fire.visible = true
 	await get_tree().create_timer(1.0).timeout
-	_clear_text()
+
+	# Teacher warns after fire appears
+	var fire_line := "Teacher: Looks like the building is on fire! Evacuate by following safety protocols."
+	_show_text(fire_line)
+
+	# Wait based on text length (or fallback)
+	var wait_time: float = float(fire_line.length()) * 0.05
+	if wait_time < 2.5:
+		wait_time = 2.5
+	await get_tree().create_timer(wait_time).timeout
+
 	print("Fire sequence done")
+
 
 
 # --- Helpers ---
