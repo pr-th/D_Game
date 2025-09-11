@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://ynhykhv0e1gc"]
+
+[ext_resource type="Script" uid="uid://dbb13xvyoft2a" path="res://Scripts/lose_screen.gd" id="1_488pv"]
+[ext_resource type="Texture2D" uid="uid://ciyoc7c4ie6jj" path="res://Assets/retry.png" id="2_go37l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deucp"]
+bg_color = Color(0.278431, 0.486275, 0.376471, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+script = ExtResource("1_488pv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_deucp")
+
+[node name="Lose" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 47.0
+offset_right = 546.0
+offset_bottom = 62.0
+scale = Vector2(3, 3)
+text = "you lose"
+
+[node name="desc" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 177.0
+offset_right = 582.0
+offset_bottom = 386.0
+scale = Vector2(2, 2)
+bbcode_enabled = true
+tab_size = 6
+
+[node name="retry" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 495.0
+offset_right = 697.0
+offset_bottom = 639.0
+texture_normal = ExtResource("2_go37l")
+ignore_texture_size = true
+stretch_mode = 0
