@@ -8,6 +8,7 @@ const SPEED: float = 100.0
 var waypoints: Array[Vector2] = []
 var current_point: int = 0
 var moving: bool = true
+var last_direction: String = "walk_s" # Default facing south
 
 func _ready() -> void:
 	# Collect all Marker2D nodes inside "Waypoints"
@@ -18,24 +19,45 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if moving and current_point < waypoints.size():
 		var target: Vector2 = waypoints[current_point]
-		var direction: Vector2 = (target - global_position).normalized()
+		var delta_vec: Vector2 = target - global_position
+		var direction: Vector2 = delta_vec.normalized()
+
 		velocity = direction * SPEED
 		move_and_slide()
 
-		# Animation logic (fixed ternary)
+		# --- NEW: instant block detection ---
+		if get_slide_collision_count() > 0:
+			_stop_with_idle()
+			return
+
+		# Animation + save last direction
 		if abs(direction.x) > abs(direction.y):
-			animated_sprite.animation = "walk_e" if direction.x > 0 else "walk_w"
+			last_direction = "walk_e" if direction.x > 0 else "walk_w"
 		else:
-			animated_sprite.animation = "walk_s" if direction.y > 0 else "walk_n"
+			last_direction = "walk_s" if direction.y > 0 else "walk_n"
+
+		animated_sprite.animation = last_direction
 		animated_sprite.play()
 
 		# Check if waypoint reached
 		if global_position.distance_to(target) < 5.0:
 			current_point += 1
 	else:
-		# Stop and go idle
-		velocity = Vector2.ZERO
-		move_and_slide()
-		animated_sprite.animation = "Idle"
-		animated_sprite.play()
-		moving = false
+		_stop_with_idle()
+
+func _stop_with_idle() -> void:
+	velocity = Vector2.ZERO
+	move_and_slide()
+
+	# If you have directional idle animations:
+	match last_direction:
+		"walk_e": animated_sprite.animation = "idle_e"
+		"walk_w": animated_sprite.animation = "idle_w"
+		"walk_s": animated_sprite.animation = "idle_s"
+		"walk_n": animated_sprite.animation = "idle_n"
+
+	# If not, just freeze the last walk frame:
+	# animated_sprite.stop()
+
+	animated_sprite.play()
+	moving = false
