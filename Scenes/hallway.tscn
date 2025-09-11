@@ -1,15 +1,15 @@
-[gd_scene load_steps=27 format=4 uid="uid://crvnymedlc4fr"]
+[gd_scene load_steps=29 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
-[ext_resource type="Script" path="res://Scenes/hallway.gd" id="1_i6vy2"]
+[ext_resource type="Script" uid="uid://chi5bvk7xxwr0" path="res://Scenes/hallway.gd" id="1_i6vy2"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_cd346"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_i6vy2"]
 [ext_resource type="Texture2D" uid="uid://c8wx6aw0qfmx5" path="res://Assets/white_smoke_resize.png" id="4_cd346"]
 [ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="6_3lkww"]
-[ext_resource type="PackedScene" uid="uid://i5o0dx164itp" path="res://Scenes/teacher.tscn" id="7_4c7va"]
-[ext_resource type="Script" uid="uid://b3y4bjp7gilua" path="res://Scenes/teachercorri.gd" id="8_kvw4f"]
 [ext_resource type="Texture2D" uid="uid://kw3vitcw00lt" path="res://Assets/Bathroom_sign.png" id="7_4c7va"]
 [ext_resource type="Texture2D" uid="uid://cmj0t23wcbvwt" path="res://Assets/Classroom_sign.png" id="8_kvw4f"]
+[ext_resource type="PackedScene" uid="uid://i5o0dx164itp" path="res://Scenes/teacher.tscn" id="9_tu15o"]
+[ext_resource type="Script" uid="uid://b3y4bjp7gilua" path="res://Scenes/teachercorri.gd" id="10_wtx7u"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i6vy2"]
 particle_flag_disable_z = true
@@ -260,15 +260,10 @@ collision_layer = 2
 position = Vector2(500.5, 108)
 shape = SubResource("RectangleShape2D_u8tmr")
 
-[node name="Teacher" parent="." instance=ExtResource("7_4c7va")]
-position = Vector2(596, 168)
-script = ExtResource("8_kvw4f")
-dialogue_label = NodePath("../Label")
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 487.0
-offset_top = 171.0
+offset_left = 468.0
+offset_top = 163.0
 offset_right = 560.0
 offset_bottom = 186.0
 autowrap_mode = 2
@@ -282,6 +277,11 @@ texture = ExtResource("7_4c7va")
 position = Vector2(1037, 221)
 scale = Vector2(0.0566406, 0.0595703)
 texture = ExtResource("8_kvw4f")
+
+[node name="Teacher" parent="." instance=ExtResource("9_tu15o")]
+position = Vector2(588, 188)
+script = ExtResource("10_wtx7u")
+dialogue_label = NodePath("../Label")
 
 [connection signal="body_entered" from="Area2D22" to="." method="_on_area_2d_22_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
