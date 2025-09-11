@@ -31,9 +31,9 @@ text = "you lose"
 
 [node name="desc" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_left = 92.0
+offset_left = 322.0
 offset_top = 177.0
-offset_right = 582.0
+offset_right = 697.0
 offset_bottom = 386.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
@@ -48,3 +48,5 @@ offset_bottom = 639.0
 texture_normal = ExtResource("2_go37l")
 ignore_texture_size = true
 stretch_mode = 0
+
+[connection signal="pressed" from="Panel/retry" to="." method="_on_retry_pressed"]
