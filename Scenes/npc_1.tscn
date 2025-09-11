@@ -1,6 +1,6 @@
-[gd_scene load_steps=40 format=3 uid="uid://6ndkjy3l4cth"]
+[gd_scene load_steps=40 format=3 uid="uid://jpesocj1qvxs"]
 
-[ext_resource type="Script" uid="uid://bhx048aih4xcm" path="res://Scenes/npc_1.gd" id="1_ky38j"]
+[ext_resource type="Script" path="res://Scenes/npc_1.gd" id="1_ky38j"]
 [ext_resource type="Texture2D" uid="uid://bcljdo0eu1g6a" path="res://Assets/Characters_free/Adam_run_16x16.png" id="1_lpqb4"]
 [ext_resource type="Texture2D" uid="uid://ype554qu0y24" path="res://Assets/Characters_free/Adam_phone_16x16.png" id="1_wp5kv"]
 
@@ -293,9 +293,6 @@ position = Vector2(347, -233)
 
 [node name="Point3" type="Marker2D" parent="Waypoints"]
 position = Vector2(346, -120)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
