@@ -70,8 +70,6 @@ texture = ExtResource("1_yvkb6")
 10:206/0 = 0
 21:85/size_in_atlas = Vector2i(6, 5)
 21:85/0 = 0
-0:126/size_in_atlas = Vector2i(9, 6)
-0:126/0 = 0
 39:160/size_in_atlas = Vector2i(4, 6)
 39:160/0 = 0
 36:169/size_in_atlas = Vector2i(3, 6)
@@ -104,6 +102,8 @@ texture = ExtResource("1_yvkb6")
 18:222/0 = 0
 9:222/size_in_atlas = Vector2i(3, 3)
 9:222/0 = 0
+2:128/size_in_atlas = Vector2i(5, 2)
+2:128/0 = 0
 
 [resource]
 physics_layer_0/collision_layer = 1
