@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://crvnymedlc4fr"]
+[gd_scene load_steps=20 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
-[ext_resource type="Script" uid="uid://hfmfa4g8w6xp" path="res://Scripts/hallway.gd" id="1_cd346"]
+[ext_resource type="Script" uid="uid://chi5bvk7xxwr0" path="res://Scenes/hallway.gd" id="1_i6vy2"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_cd346"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_i6vy2"]
 [ext_resource type="Texture2D" uid="uid://c8wx6aw0qfmx5" path="res://Assets/white_smoke_resize.png" id="4_cd346"]
-[ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="5_i6vy2"]
+[ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="6_3lkww"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i6vy2"]
 particle_flag_disable_z = true
@@ -15,25 +15,47 @@ direction = Vector3(0, -1, 0)
 gravity = Vector3(0, 20, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3lkww"]
-size = Vector2(352.5, 190)
+size = Vector2(256, 330)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c7va"]
-size = Vector2(363.5, 191.5)
+size = Vector2(267, 331)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvw4f"]
-size = Vector2(385, 145)
+size = Vector2(269, 327)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlew8"]
-size = Vector2(93, 136)
+size = Vector2(264, 327)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tu15o"]
-size = Vector2(109.5, 75.5)
+size = Vector2(263, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6vy2"]
+size = Vector2(259, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtx7u"]
+size = Vector2(261, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc1ma"]
+size = Vector2(258, 324)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mp8o8"]
+size = Vector2(261, 326)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bchde"]
+size = Vector2(258, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcmyp"]
+size = Vector2(258, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olnio"]
+size = Vector2(252, 325)
 
 [node name="hallway" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1153.0
 offset_bottom = 652.0
+script = ExtResource("1_i6vy2")
 metadata/_edit_vertical_guides_ = [307.0, 208.0]
 
 [node name="blocks" type="TileMapLayer" parent="."]
@@ -41,7 +63,7 @@ tile_map_data = PackedByteArray("AAAbAAAAAQANADQAAAAsAAAAAQANADQAAAAvAB8AAQAZAAc
 tile_set = ExtResource("1_5dfa3")
 
 [node name="furniture" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAfAAYABQACAE8AAAAZABwABQAfAIUAAAAvAAwABQAfAIUAAAAvABwABQAfAIUAAAAZAAwABQAfAIUAAAAjABYABQAVAC4AAAAkABUABQAVAC0AAAArAAUABQAaAA8AAAA=")
+tile_map_data = PackedByteArray("AAArAAUABQAaAA8AAAAfAAYABQACAE8AAAAZABwABQAfAIUAAAAvAAwABQAfAIUAAAAvABwABQAfAIUAAAAZAAwABQAfAIUAAAAfAAoABQAhADsAAAAjABYABQAVAC4AAAA=")
 tile_set = ExtResource("2_cd346")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_i6vy2")]
@@ -166,6 +188,8 @@ process_material = SubResource("ParticleProcessMaterial_i6vy2")
 [node name="Area2D" type="Area2D" parent="GPUParticles2D9" groups=["smoke"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D9/Area2D"]
+position = Vector2(-45.334, -125.384)
+shape = SubResource("RectangleShape2D_dcmyp")
 
 [node name="GPUParticles2D10" type="GPUParticles2D" parent="."]
 position = Vector2(193.334, 445.717)
@@ -175,3 +199,8 @@ process_material = SubResource("ParticleProcessMaterial_i6vy2")
 [node name="Area2D" type="Area2D" parent="GPUParticles2D10" groups=["smoke"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GPUParticles2D10/Area2D"]
+position = Vector2(73.666, -100.217)
+shape = SubResource("RectangleShape2D_olnio")
+
+[node name="Amulya" parent="." instance=ExtResource("6_3lkww")]
+position = Vector2(996, 259)
