@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://j68tg815o64"]
+[gd_scene load_steps=7 format=4 uid="uid://j68tg815o64"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_a8uwc"]
-[ext_resource type="Script" uid="uid://dqgvdrw87ls7u" path="res://Scripts/bathroom.gd" id="1_snc4n"]
+[ext_resource type="Script" path="res://Scripts/bathroom.gd" id="1_snc4n"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_snc4n"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_wncak"]
+[ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="5_wncak"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wncak"]
 size = Vector2(179, 113.5)
@@ -25,11 +26,14 @@ tile_set = ExtResource("2_snc4n")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_wncak")]
 
+[node name="Amulya" parent="." instance=ExtResource("5_wncak")]
+position = Vector2(575, 448)
+
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(551.5, 583.75)
+position = Vector2(570, 582)
 shape = SubResource("RectangleShape2D_wncak")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
