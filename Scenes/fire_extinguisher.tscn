@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bwx14opm3iqe6"]
 
-[ext_resource type="Script" uid="uid://b0n24lc27s25f" path="res://Scenes/fire_extinguisher.gd" id="1_cx22j"]
+[ext_resource type="Script" path="res://Scenes/fire_extinguisher.gd" id="1_cx22j"]
 [ext_resource type="Texture2D" uid="uid://darr2sl6grk6p" path="res://Assets/cylinder.png" id="1_oll2b"]
 [ext_resource type="Texture2D" uid="uid://rtcamagkdy01" path="res://Assets/pin.png" id="2_mfr6x"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_vm405"]

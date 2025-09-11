@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dlhlheqy6qa3r"]
+[gd_scene load_steps=9 format=4 uid="uid://dlhlheqy6qa3r"]
 
 [ext_resource type="Script" uid="uid://bfqr8p426aehw" path="res://Scripts/staircase.gd" id="1_entgn"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_kfkn8"]
@@ -9,6 +9,13 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_entgn"]
 size = Vector2(69, 102)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_entgn"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0)
+gravity = Vector3(0, 20, 0)
 
 [node name="staircase" type="Control"]
 layout_mode = 3
@@ -41,5 +48,9 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(542, 270)
 shape = SubResource("RectangleShape2D_entgn")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(472, 267)
+process_material = SubResource("ParticleProcessMaterial_entgn")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
