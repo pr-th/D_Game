@@ -375,7 +375,6 @@ position = Vector2(2, 16)
 shape = SubResource("CircleShape2D_kvrac")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
 
 [node name="SmokeLabel" type="Label" parent="."]
 visible = false

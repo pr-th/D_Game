@@ -19,5 +19,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		# Change to the fire extinguisher scene
-		get_tree().change_scene_to_file("res://Scenes/fire_extinguisher.tscn")
+		# Change to the done scene
+		get_tree().change_scene_to_file("res://Scenes/done.tscn")

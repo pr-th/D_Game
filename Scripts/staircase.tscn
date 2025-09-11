@@ -1,4 +1,5 @@
 [gd_scene load_steps=9 format=4 uid="uid://dlhlheqy6qa3r"]
+[gd_scene load_steps=9 format=4 uid="uid://dlhlheqy6qa3r"]
 
 [ext_resource type="Script" uid="uid://bfqr8p426aehw" path="res://Scripts/staircase.gd" id="1_entgn"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_kfkn8"]
@@ -16,6 +17,10 @@ emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 direction = Vector3(0, -1, 0)
 gravity = Vector3(0, 20, 0)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_entgn"]
+radius = 15.0
+height = 60.0
 
 [node name="staircase" type="Control"]
 layout_mode = 3
@@ -53,4 +58,12 @@ shape = SubResource("RectangleShape2D_entgn")
 position = Vector2(472, 267)
 process_material = SubResource("ParticleProcessMaterial_entgn")
 
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(181, 245)
+shape = SubResource("CapsuleShape2D_entgn")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

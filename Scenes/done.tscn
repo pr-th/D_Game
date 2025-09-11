@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://cst8pbdmui4i7"]
+
+[ext_resource type="Script" uid="uid://gq4pjbuvd5k3" path="res://Scripts/done.gd" id="1_kqbrk"]
+[ext_resource type="Texture2D" uid="uid://obtp1m0fkst7" path="res://Assets/home.png" id="2_ef23m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deucp"]
+bg_color = Color(0.278431, 0.486275, 0.376471, 1)
+
+[node name="done" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+script = ExtResource("1_kqbrk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_deucp")
+
+[node name="yAy" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 139.0
+offset_right = 538.0
+offset_bottom = 208.0
+scale = Vector2(3, 3)
+text = "YOU escaped
+
+
+"
+
+[node name="good job" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 305.0
+offset_right = 583.0
+offset_bottom = 379.0
+scale = Vector2(3, 3)
+text = "good job
+
+
+"
+
+[node name="retry" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 376.0
+offset_right = 690.0
+offset_bottom = 539.0
+texture_normal = ExtResource("2_ef23m")
+ignore_texture_size = true
+stretch_mode = 0

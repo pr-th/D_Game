@@ -33,6 +33,7 @@ tile_set = ExtResource("1_ebomr")
 script = ExtResource("2_fbdn8")
 
 [node name="SmokeParticle" type="GPUParticles2D" parent="Blocks"]
+visible = false
 position = Vector2(257, 33)
 rotation = -3.14159
 scale = Vector2(1.26946, -2.22628)
@@ -40,6 +41,7 @@ texture = ExtResource("3_jmf6r")
 process_material = SubResource("ParticleProcessMaterial_rsnqb")
 
 [node name="SmokeParticle2" type="GPUParticles2D" parent="Blocks"]
+visible = false
 position = Vector2(821, 34)
 rotation = -3.14159
 scale = Vector2(1.26946, -2.22628)
@@ -60,6 +62,7 @@ position = Vector2(74, 359.75)
 shape = SubResource("RectangleShape2D_jmf6r")
 
 [node name="Amulya" parent="." instance=ExtResource("7_jmf6r")]
+visible = false
 position = Vector2(194, 314)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
