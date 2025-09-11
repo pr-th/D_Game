@@ -1,6 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
+[ext_resource type="Script" uid="uid://hfmfa4g8w6xp" path="res://Scripts/hallway.gd" id="1_cd346"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="2_cd346"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_i6vy2"]
 [ext_resource type="Texture2D" uid="uid://c8wx6aw0qfmx5" path="res://Assets/white_smoke_resize.png" id="4_cd346"]
@@ -13,11 +14,18 @@ emission_box_extents = Vector3(1, 1, 1)
 direction = Vector3(0, -1, 0)
 gravity = Vector3(0, 20, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd346"]
+size = Vector2(352, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6vy2"]
+size = Vector2(354, 193.5)
+
 [node name="hallway" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1153.0
 offset_bottom = 652.0
+script = ExtResource("1_cd346")
 metadata/_edit_vertical_guides_ = [307.0, 208.0]
 
 [node name="blocks" type="TileMapLayer" parent="."]

@@ -23,6 +23,9 @@ initial_velocity_min = 5.0
 initial_velocity_max = 10.0
 gravity = Vector3(0, -10, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ckb3"]
+size = Vector2(112, 176)
+
 [node name="Classroom" type="Control"]
 layout_mode = 3
 anchors_preset = 0
