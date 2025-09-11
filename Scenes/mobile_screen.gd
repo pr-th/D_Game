@@ -1,7 +1,8 @@
 extends Control
 
 signal direction_changed(new_vector: Vector2)
-
+signal l_pressed
+signal r_pressed
 var pressed_directions := {
 	"up": false,
 	"down": false,
@@ -61,3 +62,15 @@ func _on_right_button_down():
 func _on_right_button_up():
 	pressed_directions["right"] = false
 	_update_direction()
+
+
+func _on_l_pressed() -> void:
+	emit_signal("l_pressed")
+
+
+func _on_r_pressed() -> void:
+	emit_signal("r_pressed")
+
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

@@ -16,12 +16,11 @@ func _on_info_btn_pressed() -> void:
 
 
 func _on_crown_btn_pressed() -> void:
-	pass
+	get_tree().change_scene_to_file("res://Scenes/hallway.tscn")
 
 
 func _on_question_btn_pressed() -> void:
 	pass
-
 
 func _on_start_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/classroom.tscn")

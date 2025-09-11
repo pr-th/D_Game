@@ -15,9 +15,18 @@ run/main_scene="uid://l1y08p7lcq0t"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+global="*res://global.gd"
+
 [display]
 
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[editor]
+
+version_control/plugin_name="res://golbal.gd"
 
 [gui]
 
@@ -46,3 +55,4 @@ move_right={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
