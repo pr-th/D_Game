@@ -8,6 +8,9 @@ var current_page: int = 0
 @onready var next_button = $next_button
 @onready var prev_button = $prev_button
 @onready var home_button = $home_btn
+@onready var page_flip_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D   # 📖 flip sound
+@onready var home_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D2       # 🏠 home sound (new node)
+
 func _ready():
 	load_pages()
 	update_book()
@@ -53,16 +56,22 @@ func update_book():
 	else:
 		right_page.text = ""
 
-
 func _on_next_page():
 	if current_page + 2 < pages.size():
 		current_page += 2
 		update_book()
+		if page_flip_sound:
+			page_flip_sound.play()
 
 func _on_prev_page():
 	if current_page - 2 >= 0:
 		current_page -= 2
 		update_book()
+		if page_flip_sound:
+			page_flip_sound.play()
 
-func _on_home():
+func _on_home() -> void:
+	if home_sound:
+		home_sound.play()
+	await get_tree().create_timer(0.57).timeout   # ⏳ wait 3 seconds
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

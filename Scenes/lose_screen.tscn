@@ -14,7 +14,8 @@ anchors_preset = 0
 offset_right = 1154.0
 offset_bottom = 648.0
 script = ExtResource("1_488pv")
-metadata/_edit_vertical_guides_ = [636.0, 482.0]
+metadata/_edit_vertical_guides_ = [636.0, 482.0, 1458.0]
+metadata/_edit_horizontal_guides_ = [524.0]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -32,39 +33,39 @@ expand_mode = 1
 
 [node name="Lose" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 451.0
-offset_top = 138.0
-offset_right = 526.0
-offset_bottom = 153.0
+offset_left = 438.0
+offset_top = 104.0
+offset_right = 513.0
+offset_bottom = 119.0
 scale = Vector2(3, 3)
 text = "you lose"
 
 [node name="desc" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_left = 195.0
-offset_top = 211.0
-offset_right = 560.0
-offset_bottom = 260.0
+offset_left = 187.0
+offset_top = 320.0
+offset_right = 552.0
+offset_bottom = 369.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
 tab_size = 6
 
 [node name="retry" type="TextureButton" parent="Panel"]
 layout_mode = 0
-offset_left = 425.0
-offset_top = 496.0
-offset_right = 686.0
-offset_bottom = 640.0
+offset_left = 647.0
+offset_top = 486.0
+offset_right = 908.0
+offset_bottom = 630.0
 texture_normal = ExtResource("2_go37l")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="learn" type="TextureButton" parent="Panel"]
 layout_mode = 0
-offset_left = 442.0
-offset_top = 266.0
-offset_right = 679.0
-offset_bottom = 427.0
+offset_left = 236.0
+offset_top = 475.0
+offset_right = 473.0
+offset_bottom = 636.0
 texture_normal = ExtResource("3_go37l")
 ignore_texture_size = true
 stretch_mode = 0

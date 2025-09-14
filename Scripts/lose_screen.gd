@@ -11,4 +11,4 @@ func _on_retry_pressed() -> void:
 
 
 func _on_learn_pressed() -> void:
-	pass 
+	get_tree().change_scene_to_file("res://Scenes/info.tscn") 

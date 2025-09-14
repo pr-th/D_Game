@@ -36,6 +36,10 @@ func _ready() -> void:
 		controller.connect("direction_changed", Callable(self, "_on_direction_changed"))
 		controller.connect("l_pressed", Callable(self, "_on_l_pressed"))
 		controller.connect("r_pressed", Callable(self, "_on_r_pressed"))
+		if controller.has_signal("up_pressed"):
+			controller.connect("up_pressed", Callable(self, "_on_up_pressed"))
+		if controller.has_signal("down_pressed"):
+			controller.connect("down_pressed", Callable(self, "_on_down_pressed"))
 		print("Connected to controller:", controller.name)
 	else:
 		print("No controller found")
@@ -67,6 +71,25 @@ func _on_smoke_area_exited(body: Node2D) -> void:
 func _on_l_pressed() -> void:
 	print("L button pressed")
 
+func _on_r_pressed() -> void:
+	print("R button pressed")
+
+func _on_up_pressed() -> void:
+	print("Up button pressed")
+	if cutscene_mode:
+		return
+	input_vector = Vector2.UP
+	idle_timer = 0.0
+	_update_animation()
+
+func _on_down_pressed() -> void:
+	print("Down button pressed")
+	if cutscene_mode:
+		return
+	input_vector = Vector2.DOWN
+	idle_timer = 0.0
+	_update_animation()
+
 func _on_direction_changed(new_vector: Vector2) -> void:
 	if cutscene_mode: 
 		return
@@ -84,7 +107,7 @@ func _physics_process(delta: float) -> void:
 # --- Player controlled movement ---
 func _player_movement(delta: float) -> void:
 	if in_smoke:
-		smoke_label.visible=true
+		smoke_label.visible = true
 		# Crawling
 		if input_vector.x < 0:
 			crawling = true
@@ -96,11 +119,21 @@ func _player_movement(delta: float) -> void:
 			velocity = Vector2.RIGHT * CRAWL_SPEED
 			animated_sprite.animation = "sit_r"
 			animated_sprite.play()
+		elif input_vector.y < 0:
+			crawling = true
+			velocity = Vector2.UP * CRAWL_SPEED
+			animated_sprite.animation = "up"
+			animated_sprite.play()
+		elif input_vector.y > 0:
+			crawling = true
+			velocity = Vector2.DOWN * CRAWL_SPEED
+			animated_sprite.animation = "down"
+			animated_sprite.play()
 		else:
 			crawling = false
 			velocity = Vector2.ZERO
 	else:
-		smoke_label.visible=false
+		smoke_label.visible = false
 		# Normal walking
 		if input_vector != Vector2.ZERO:
 			velocity = input_vector.normalized() * SPEED
