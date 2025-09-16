@@ -28,7 +28,6 @@ tile_set = ExtResource("2_punvo")
 
 [node name="Amulya" parent="." instance=ExtResource("4_punvo")]
 position = Vector2(556, 395)
-waypoints_node = NodePath("")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2

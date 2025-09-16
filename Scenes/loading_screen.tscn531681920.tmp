@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq4vy55iiq1q1"]
+
+[ext_resource type="Script" uid="uid://ceqtlhohbokov" path="res://Scenes/loading_screen.gd" id="1_0t5xw"]
+[ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="5_1opfs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2785t"]
+bg_color = Color(0.278431, 0.486275, 0.376471, 1)
+
+[node name="loading_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+script = ExtResource("1_0t5xw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2785t")
+
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 40.0
+offset_right = 605.0
+offset_bottom = 330.0
+scale = Vector2(2, 2)
+text = "	
+"
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_1opfs")]

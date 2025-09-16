@@ -76,7 +76,6 @@ texture = ExtResource("4_eevqa")
 
 [node name="Amulya" parent="." instance=ExtResource("5_n333h")]
 position = Vector2(260, 253)
-waypoints_node = NodePath("")
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
 position = Vector2(243.073, 400.855)
