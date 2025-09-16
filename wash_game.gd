@@ -1,7 +1,7 @@
 extends Control
 
 var attempts: int = 3
-var pointer_speed: float = 200.0
+var pointer_speed: float = 300.0
 var pointer_direction: int = 1
 
 @onready var bar: TextureRect = $bar
