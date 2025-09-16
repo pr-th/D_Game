@@ -67,9 +67,32 @@ func _on_smoke_area_exited(body: Node2D) -> void:
 		in_smoke = false
 		smoke_label.visible = false
 
-# --- Controller buttons ---
+var map_scene: Node = null
+var on_map: bool = false
+
 func _on_l_pressed() -> void:
-	print("L button pressed")
+	var tree = get_tree()
+	var game_scene = tree.current_scene
+
+	if not on_map:
+		# Load map only once
+		if map_scene == null:
+			map_scene = load("res://map.tscn").instantiate()
+			tree.root.add_child(map_scene)
+			map_scene.owner = tree.root
+
+		# Hide game scene completely so nothing interferes
+		game_scene.visible = false
+		on_map = true
+	else:
+		# Remove map and restore game
+		if map_scene:
+			map_scene.queue_free()
+			map_scene = null
+
+		game_scene.visible = true
+		on_map = false
+
 
 func _on_r_pressed() -> void:
 	print("R button pressed")

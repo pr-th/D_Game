@@ -1,6 +1,8 @@
 extends Control
-
+@onready var theme_audio: AudioStreamPlayer2D = $ThemeAudio
 func _ready() -> void:
+	if theme_audio and not theme_audio.playing:
+		theme_audio.play()
 	# Automatically connect signals for all smoke areas
 	for smoke_area in get_tree().get_nodes_in_group("smoke"):
 		smoke_area.body_entered.connect(_on_smoke_body_entered)

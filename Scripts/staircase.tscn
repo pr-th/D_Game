@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dlhlheqy6qa3r"]
+[gd_scene load_steps=16 format=4 uid="uid://dlhlheqy6qa3r"]
 
 [ext_resource type="Script" uid="uid://bfqr8p426aehw" path="res://Scripts/staircase.gd" id="1_entgn"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_kfkn8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cko41ujqldov6" path="res://Assets/fire-extinguisher.png" id="4_eevqa"]
 [ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="5_n333h"]
 [ext_resource type="Texture2D" uid="uid://ckbhs2q46ej23" path="res://Assets/fire-sketch.png" id="7_gdc0h"]
+[ext_resource type="AudioStream" uid="uid://dl8t3u1nyia4t" path="res://Assets/Blastwave_FX_BuildingFireAmbience_HV.90_Trim(www.voicy.network).wav" id="8_gvml3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gvml3"]
 atlas = ExtResource("7_gdc0h")
@@ -154,6 +155,78 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2(225.5, 501.5)
 shape = SubResource("RectangleShape2D_entgn")
+
+[node name="SceneAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_gvml3")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D7"]
+position = Vector2(-20.073, -16.855)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.885321
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D9"]
+position = Vector2(34.927, 44.145)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.885321
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D10"]
+position = Vector2(-6.07301, 112.145)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.885321
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D11"]
+position = Vector2(-56.073, 20.145)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.885321
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D13"]
+position = Vector2(-22.073, 159.145)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.885321
+
+[node name="Sprite2D14" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D14"]
+position = Vector2(31.927, 199.145)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_w2s30")
+autoplay = "default"
+frame_progress = 0.885321
+
+[node name="Sprite2D16" type="Sprite2D" parent="."]
+position = Vector2(243.073, 400.855)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
