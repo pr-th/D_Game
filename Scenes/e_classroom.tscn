@@ -64,8 +64,10 @@ shape = SubResource("RectangleShape2D_jmf6r")
 [node name="Amulya" parent="." instance=ExtResource("7_jmf6r")]
 visible = false
 position = Vector2(194, 314)
+waypoints_node = NodePath("")
 
 [node name="Amulya2" parent="." instance=ExtResource("7_jmf6r")]
 position = Vector2(224, 349)
+waypoints_node = NodePath("")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

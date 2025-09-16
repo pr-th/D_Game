@@ -32,6 +32,7 @@ tile_set = ExtResource("2_snc4n")
 
 [node name="Amulya" parent="." instance=ExtResource("5_wncak")]
 position = Vector2(575, 448)
+waypoints_node = NodePath("")
 
 [node name="sink4" type="Sprite2D" parent="."]
 position = Vector2(636, 113)
