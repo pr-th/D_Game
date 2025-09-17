@@ -33,10 +33,10 @@ expand_mode = 1
 
 [node name="Lose" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 438.0
-offset_top = 104.0
-offset_right = 513.0
-offset_bottom = 119.0
+offset_left = 473.0
+offset_top = 132.0
+offset_right = 548.0
+offset_bottom = 147.0
 scale = Vector2(3, 3)
 text = "you lose"
 

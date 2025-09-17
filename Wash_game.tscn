@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://c767a5ytkavul"]
+
+[ext_resource type="Script" uid="uid://brn7nbrhx35wc" path="res://wash_game.gd" id="1_2fptj"]
+[ext_resource type="Texture2D" uid="uid://b3n364yqwmb67" path="res://Assets/sink_top.png" id="1_gw51f"]
+[ext_resource type="Texture2D" uid="uid://ci0tl63ftwf6f" path="res://Assets/bar.png" id="2_i7etq"]
+[ext_resource type="Texture2D" uid="uid://cw4w8q0f0v4ml" path="res://Assets/pointer.png" id="3_wu1r0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2fptj")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 738.0
+texture = ExtResource("1_gw51f")
+stretch_mode = 6
+
+[node name="bar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -117.0
+offset_top = -4.0
+offset_right = 1270.0
+offset_bottom = 652.0
+texture = ExtResource("2_i7etq")
+
+[node name="pointer" type="TextureRect" parent="bar"]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 200.0
+offset_right = 1213.0
+offset_bottom = 393.0
+texture = ExtResource("3_wu1r0")
+expand_mode = 1
+
+[node name="Green Spot" type="TextureRect" parent="bar"]
+layout_mode = 0
+offset_left = 714.0
+offset_top = 287.0
+offset_right = 721.0
+offset_bottom = 373.0
+
+[node name="HitArea" type="TextureRect" parent="bar"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 209.0
+offset_right = 1262.0
+offset_bottom = 437.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 19.0
+offset_right = 295.0
+offset_bottom = 110.0

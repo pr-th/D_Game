@@ -1,9 +1,15 @@
 extends Control
+@onready var dialogue_box: Panel = $DialogueBox
+@onready var dialogue_label: Label = $DialogueBox/Label
 @onready var theme_audio: AudioStreamPlayer2D = $ThemeAudio
 func _ready() -> void:
 	if theme_audio and not theme_audio.playing:
 		theme_audio.play()
-	# Automatically connect signals for all smoke areas
+	dialogue_box.visible = false	
+	await get_tree().create_timer(3).timeout
+	dialogue_box.visible = true	
+	await get_tree().create_timer(7).timeout
+	dialogue_box.visible = false
 	for smoke_area in get_tree().get_nodes_in_group("smoke"):
 		smoke_area.body_entered.connect(_on_smoke_body_entered)
 		smoke_area.body_exited.connect(_on_smoke_body_exited)

@@ -30,4 +30,5 @@ func _on_question_btn_pressed() -> void:
 	pass
 
 func _on_start_btn_pressed() -> void:
+	global.scarf = false
 	get_tree().change_scene_to_file("res://Scenes/classroom.tscn")

@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://chg6mphk76fbs"]
+
+[ext_resource type="Script" uid="uid://jcm64vx7stwq" path="res://Scenes/kahoot.gd" id="1_je2b7"]
+[ext_resource type="Texture2D" uid="uid://obtp1m0fkst7" path="res://Assets/home.png" id="2_flfem"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74xmp"]
+bg_color = Color(0.278431, 0.486275, 0.376471, 1)
+
+[node name="Kahoot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_je2b7")
+metadata/_edit_vertical_guides_ = [208.0, 958.0]
+metadata/_edit_horizontal_guides_ = [412.0]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_74xmp")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 987.0
+offset_top = -23.0
+offset_right = 1184.0
+offset_bottom = 139.0
+texture_normal = ExtResource("2_flfem")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="question" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 102.0
+offset_right = 584.0
+offset_bottom = 158.0
+scale = Vector2(2, 2)
+
+[node name="option1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 231.0
+offset_right = 956.0
+offset_bottom = 282.0
+
+[node name="option2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 291.0
+offset_right = 957.0
+offset_bottom = 342.0
+
+[node name="option3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 352.0
+offset_right = 958.0
+offset_bottom = 403.0
+
+[node name="option4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 412.0
+offset_right = 956.0
+offset_bottom = 463.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="option3" to="." method="_on_option_3_pressed"]
+[connection signal="pressed" from="option4" to="." method="_on_option_4_pressed"]
