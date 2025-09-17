@@ -202,16 +202,25 @@ func _cutscene_movement(delta: float) -> void:
 func _update_animation() -> void:
 	if crawling:
 		return
-	
 	var anim: String = "Idle"
+	if global.scarf:
+		anim = "mask_idle"	
 	if input_vector != Vector2.ZERO:
 		if abs(input_vector.x) > abs(input_vector.y):
-			anim = "right" if input_vector.x > 0 else "left"
+			print(global.scarf)
+			if global.scarf:				
+				anim = "mask_right" if input_vector.x > 0 else "mask_left"
+			else:
+				anim = "right" if input_vector.x > 0 else "left"
 		else:
-			anim = "down" if input_vector.y > 0 else "up"
+			if global.scarf:
+				anim = "mask_down" if input_vector.y > 0 else "up"
+			else:
+				anim = "down" if input_vector.y > 0 else "up"
+			
 		last_direction = anim
 	else:
-		anim = "Idle"
+		anim = "mask_idle" if global.scarf else "Idle"
 
 	if animated_sprite.animation != anim:
 		animated_sprite.animation = anim

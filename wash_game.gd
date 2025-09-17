@@ -60,9 +60,8 @@ func _on_fail() -> void:
 
 
 func _on_success() -> void:
-	print("You picked the lock successfully!")
-	# Example: switch to a win screen
-	# get_tree().change_scene_to_file("res://win_screen.tscn")
+	global.scarf = true
+	get_tree().change_scene_to_file("res://Scenes/bathroom.tscn")
 
 
 func _update_attempts_label() -> void:
