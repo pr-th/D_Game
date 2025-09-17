@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://j68tg815o64"]
+[gd_scene load_steps=10 format=4 uid="uid://j68tg815o64"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_a8uwc"]
 [ext_resource type="Script" uid="uid://dqgvdrw87ls7u" path="res://Scripts/bathroom.gd" id="1_snc4n"]
@@ -10,6 +10,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wncak"]
 size = Vector2(179, 113.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7h1"]
+size = Vector2(355, 69.5)
 
 [node name="Bathroom" type="Control"]
 layout_mode = 3
@@ -84,4 +87,11 @@ rotation = -1.5708
 scale = Vector2(0.0630862, 0.0487762)
 texture = ExtResource("7_ig7h1")
 
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(582.5, 114.25)
+shape = SubResource("RectangleShape2D_ig7h1")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
