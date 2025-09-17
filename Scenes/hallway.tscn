@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://crvnymedlc4fr"]
+[gd_scene load_steps=31 format=4 uid="uid://crvnymedlc4fr"]
 
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_5dfa3"]
 [ext_resource type="Script" uid="uid://chi5bvk7xxwr0" path="res://Scenes/hallway.gd" id="1_i6vy2"]
@@ -70,13 +70,15 @@ size = Vector2(95, 133.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8tmr"]
 size = Vector2(143, 84)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtx7u"]
+
 [node name="hallway" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1153.0
 offset_bottom = 652.0
 script = ExtResource("1_i6vy2")
-metadata/_edit_vertical_guides_ = [307.0, 208.0]
+metadata/_edit_vertical_guides_ = [307.0, 208.0, 765.0, 384.0]
 metadata/_edit_horizontal_guides_ = [203.0]
 
 [node name="blocks" type="TileMapLayer" parent="."]
@@ -261,14 +263,6 @@ collision_layer = 2
 position = Vector2(500.5, 108)
 shape = SubResource("RectangleShape2D_u8tmr")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 468.0
-offset_top = 163.0
-offset_right = 560.0
-offset_bottom = 186.0
-autowrap_mode = 2
-
 [node name="bathroom_sign" type="Sprite2D" parent="."]
 position = Vector2(345, 219)
 scale = Vector2(0.0553385, 0.0493164)
@@ -282,10 +276,26 @@ texture = ExtResource("8_kvw4f")
 [node name="Teacher" parent="." instance=ExtResource("9_tu15o")]
 position = Vector2(588, 188)
 script = ExtResource("10_wtx7u")
-dialogue_label = NodePath("../Label")
+dialogue_label = NodePath("../DialogueBox/Label")
 
 [node name="ThemeAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_wtx7u")
+
+[node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 562.0
+offset_right = 768.0
+offset_bottom = 641.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtx7u")
+
+[node name="Label" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 7.0
+offset_right = 327.0
+offset_bottom = 69.0
+autowrap_mode = 2
 
 [connection signal="body_entered" from="Area2D22" to="." method="_on_area_2d_22_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
