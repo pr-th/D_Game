@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=4 uid="uid://tslmg4bohuke"]
+[gd_scene load_steps=4 format=4 uid="uid://c5okatrpwp1yt"]
 
-[ext_resource type="Script" uid="uid://cynixdmd0ma6x" path="res://map.gd" id="1_p5pve"]
+[ext_resource type="Script" path="res://map.gd" id="1_p5pve"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="2_71pa8"]
 [ext_resource type="TileSet" uid="uid://c8b81fsl1lmdw" path="res://Assets/furniture.tres" id="3_05x41"]
 

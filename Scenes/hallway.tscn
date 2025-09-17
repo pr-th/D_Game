@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://kw3vitcw00lt" path="res://Assets/Bathroom_sign.png" id="7_4c7va"]
 [ext_resource type="Texture2D" uid="uid://cmj0t23wcbvwt" path="res://Assets/Classroom_sign.png" id="8_kvw4f"]
 [ext_resource type="PackedScene" uid="uid://i5o0dx164itp" path="res://Scenes/teacher.tscn" id="9_tu15o"]
-[ext_resource type="Script" uid="uid://b3y4bjp7gilua" path="res://Scenes/teachercorri.gd" id="10_wtx7u"]
+[ext_resource type="Script" path="res://Scenes/teachercorri.gd" id="10_wtx7u"]
 [ext_resource type="AudioStream" uid="uid://bkwlhg45iwbtg" path="res://Assets/ambient-piano-relaxing-music-347950.wav" id="11_wtx7u"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i6vy2"]
