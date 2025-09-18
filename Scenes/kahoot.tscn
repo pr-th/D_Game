@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://chg6mphk76fbs"]
+[gd_scene load_steps=5 format=3 uid="uid://chg6mphk76fbs"]
 
 [ext_resource type="Script" uid="uid://jcm64vx7stwq" path="res://Scenes/kahoot.gd" id="1_je2b7"]
 [ext_resource type="Texture2D" uid="uid://obtp1m0fkst7" path="res://Assets/home.png" id="2_flfem"]
+[ext_resource type="AudioStream" uid="uid://c6poekqf7lmrw" path="res://Assets/90s-game-ui-6-185099.wav" id="3_flfem"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74xmp"]
 bg_color = Color(0.278431, 0.486275, 0.376471, 1)
@@ -66,6 +67,9 @@ offset_left = 207.0
 offset_top = 412.0
 offset_right = 956.0
 offset_bottom = 463.0
+
+[node name="HomeAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_flfem")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="option1" to="." method="_on_option_1_pressed"]

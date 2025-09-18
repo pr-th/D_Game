@@ -1,5 +1,5 @@
 extends Control
-
+@onready var home_music: AudioStreamPlayer2D = $HomeAudio
 var questions = [
 	{
 		"q": "What is the safest way to exit a smoke-filled room?",
@@ -82,6 +82,10 @@ func show_final_score():
 		b.hide()
 
 func _on_texture_button_pressed() -> void:
+	home_music.volume_db = -5
+	if home_music and not home_music.playing:
+		home_music.play()
+	await get_tree().create_timer(0.57).timeout
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
 func _on_option_1_pressed() -> void:

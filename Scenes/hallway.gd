@@ -5,14 +5,15 @@ extends Control
 func _ready() -> void:
 	if theme_audio and not theme_audio.playing:
 		theme_audio.play()
+	for smoke_area in get_tree().get_nodes_in_group("smoke"):
+		smoke_area.body_entered.connect(_on_smoke_body_entered)
+		smoke_area.body_exited.connect(_on_smoke_body_exited)
 	dialogue_box.visible = false	
 	await get_tree().create_timer(3).timeout
 	dialogue_box.visible = true	
 	await get_tree().create_timer(7).timeout
 	dialogue_box.visible = false
-	for smoke_area in get_tree().get_nodes_in_group("smoke"):
-		smoke_area.body_entered.connect(_on_smoke_body_entered)
-		smoke_area.body_exited.connect(_on_smoke_body_exited)
+	
 
 func _on_smoke_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):  # Amulya must be in "player" group

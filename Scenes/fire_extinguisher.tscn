@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwx14opm3iqe6"]
+[gd_scene load_steps=9 format=3 uid="uid://bwx14opm3iqe6"]
 
-[ext_resource type="Script" path="res://Scenes/fire_extinguisher.gd" id="1_cx22j"]
+[ext_resource type="Script" uid="uid://b0n24lc27s25f" path="res://Scenes/fire_extinguisher.gd" id="1_cx22j"]
 [ext_resource type="Texture2D" uid="uid://darr2sl6grk6p" path="res://Assets/cylinder.png" id="1_oll2b"]
 [ext_resource type="Texture2D" uid="uid://rtcamagkdy01" path="res://Assets/pin.png" id="2_mfr6x"]
 [ext_resource type="PackedScene" uid="uid://80twmfosa2l1" path="res://Scenes/mobile-screen.tscn" id="3_vm405"]
 [ext_resource type="Texture2D" uid="uid://bt6k0dal0eipc" path="res://Assets/handle.png" id="4_vm405"]
+[ext_resource type="AudioStream" uid="uid://hk7hp5ag8j2r" path="res://Assets/pin_removing.wav" id="6_8mbj3"]
+[ext_resource type="AudioStream" uid="uid://b0r0idjku1feg" path="res://Assets/fire_extinguser_audio.wav" id="7_c6tet"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2785t"]
 bg_color = Color(0.278431, 0.486275, 0.376471, 1)
@@ -55,6 +57,12 @@ position = Vector2(578, 362)
 texture = ExtResource("1_oll2b")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_vm405")]
+
+[node name="PinAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_8mbj3")
+
+[node name="ReleaseAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_c6tet")
 
 [connection signal="pressed" from="pin" to="." method="_on_pin_pressed"]
 [connection signal="pressed" from="handle" to="." method="_on_handle_pressed"]

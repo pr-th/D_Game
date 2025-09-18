@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bx00lta57rep"]
+[gd_scene load_steps=7 format=3 uid="uid://bx00lta57rep"]
 
 [ext_resource type="Script" uid="uid://dbb13xvyoft2a" path="res://Scripts/lose_screen.gd" id="1_488pv"]
 [ext_resource type="Texture2D" uid="uid://ciyoc7c4ie6jj" path="res://Assets/retry.png" id="2_go37l"]
 [ext_resource type="Texture2D" uid="uid://bb6db10v6ba4u" path="res://Assets/bg_clas.png" id="2_nk27f"]
 [ext_resource type="Texture2D" uid="uid://bgescbjnciswy" path="res://Assets/learn.png" id="3_go37l"]
+[ext_resource type="AudioStream" uid="uid://kvg70ldo6a3i" path="res://Assets/loose_audio.wav" id="5_38ql5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deucp"]
 bg_color = Color(0.278431, 0.486275, 0.376471, 1)
@@ -69,6 +70,9 @@ offset_bottom = 636.0
 texture_normal = ExtResource("3_go37l")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="LoseAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_38ql5")
 
 [connection signal="pressed" from="Panel/retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Panel/learn" to="." method="_on_learn_pressed"]

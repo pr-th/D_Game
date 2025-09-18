@@ -12,7 +12,7 @@ func _ready() -> void:
 	info_btn.modulate = Color(1, 1, 1, 0)
 	question_btn.modulate = Color(1, 1, 1, 0)
 	crown_btn.modulate = Color(1, 1, 1, 0)
-
+	menu_music.volume_db = 2
 	# Play menu music when the scene loads
 	if menu_music and not menu_music.playing:
 		menu_music.play()

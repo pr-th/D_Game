@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dg5qybdq43rn1"]
+[gd_scene load_steps=19 format=4 uid="uid://dg5qybdq43rn1"]
 
 [ext_resource type="Script" uid="uid://bpwq1wo8c57b2" path="res://Scenes/classroom.gd" id="1_46k8r"]
 [ext_resource type="TileSet" uid="uid://bsjsyi1qdiko" path="res://Assets/blocks.tres" id="1_r2sku"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://i5o0dx164itp" path="res://Scenes/teacher.tscn" id="11_3vrak"]
 [ext_resource type="Script" uid="uid://b5kmauojlg8bv" path="res://Scenes/cut_scene_manager.gd" id="12_me841"]
 [ext_resource type="PackedScene" uid="uid://cngibk5gbb0a3" path="res://Scenes/amulya.tscn" id="13_uvfad"]
+[ext_resource type="AudioStream" uid="uid://bkwlhg45iwbtg" path="res://Assets/ambient-piano-relaxing-music-347950.wav" id="14_0v4qc"]
+[ext_resource type="AudioStream" uid="uid://dl8t3u1nyia4t" path="res://Assets/Blastwave_FX_BuildingFireAmbience_HV.90_Trim(www.voicy.network).wav" id="15_ly1mb"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_46k8r"]
 particle_flag_disable_z = true
@@ -170,5 +172,11 @@ offset_top = 15.0
 offset_right = 678.0
 offset_bottom = 70.0
 autowrap_mode = 2
+
+[node name="ThemeAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_0v4qc")
+
+[node name="SmokeAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_ly1mb")
 
 [connection signal="body_entered" from="Area2D22" to="." method="_on_area_2d_22_body_entered"]

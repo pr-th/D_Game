@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cst8pbdmui4i7"]
+[gd_scene load_steps=7 format=3 uid="uid://cst8pbdmui4i7"]
 
 [ext_resource type="Script" uid="uid://gq4pjbuvd5k3" path="res://Scripts/done.gd" id="1_kqbrk"]
 [ext_resource type="Texture2D" uid="uid://obtp1m0fkst7" path="res://Assets/home.png" id="2_ef23m"]
 [ext_resource type="Texture2D" uid="uid://bb6db10v6ba4u" path="res://Assets/bg_clas.png" id="2_wyt0d"]
+[ext_resource type="AudioStream" uid="uid://003v04hnq6tm" path="res://Assets/win_audio.wav" id="4_wyt0d"]
+[ext_resource type="AudioStream" uid="uid://c6poekqf7lmrw" path="res://Assets/90s-game-ui-6-185099.wav" id="5_2g6bo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deucp"]
 bg_color = Color(0.278431, 0.486275, 0.376471, 1)
@@ -61,5 +63,11 @@ offset_bottom = 634.0
 texture_normal = ExtResource("2_ef23m")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="WinAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wyt0d")
+
+[node name="HomeAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_2g6bo")
 
 [connection signal="pressed" from="Panel/retry" to="." method="_on_retry_pressed"]
